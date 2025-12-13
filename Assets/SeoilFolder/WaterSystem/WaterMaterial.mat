@@ -107,7 +107,7 @@ Material:
     - _DstBlendAlpha: 0
     - _EdgeStrength: 4
     - _EnvironmentReflections: 1
-    - _FadeDistance: 0
+    - _FadeDistance: 0.1
     - _FoamEnd: 0.9
     - _FoamNoiseScale: 1
     - _FoamNoiseSpeed: 1
