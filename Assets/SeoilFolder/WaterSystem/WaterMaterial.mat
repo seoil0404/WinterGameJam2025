@@ -105,9 +105,9 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
-    - _EdgeStrength: 5
+    - _EdgeStrength: 4
     - _EnvironmentReflections: 1
-    - _FadeDistance: 0.78
+    - _FadeDistance: 0
     - _FoamEnd: 0.9
     - _FoamNoiseScale: 1
     - _FoamNoiseSpeed: 1
@@ -144,7 +144,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DeepColor: {r: 0.4198113, g: 0.69323856, b: 1, a: 1}
-    - _EdgeColor: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
+    - _EdgeColor: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShallowColor: {r: 0, g: 0.47009897, b: 1, a: 1}
