@@ -33,7 +33,7 @@ public class SceneController : MonoBehaviour
 
     private void Start()
     {
-        //AudioManager.Instance.SetBGM(AudioManager.Instance.AudioData.TitleBGM);
+        AudioManager.Instance.SetBGM(AudioManager.Instance.AudioData.TestSound);
     }
 
     public void LoadScene(SceneType sceneName)

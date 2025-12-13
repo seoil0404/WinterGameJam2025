@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5275ce17b8041464dac3c0adb43ece1b, type: 3}
   m_Name: AudioData
   m_EditorClassIdentifier: Assembly-CSharp::AudioData
+  testSound: {fileID: 8300000, guid: d1752a1f839c870458671395b5f12a22, type: 3}

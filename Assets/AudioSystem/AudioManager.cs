@@ -35,13 +35,12 @@ public class AudioManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-
-        bgmSourcePool.AddFirst(Instantiate(bgmPrefab, transform));
     }
 
     public void SetBGM(AudioClip clip, float volume = 1f, float fadeDuration = 1f)
     {
-        if (bgmSourcePool.Count != 0 && clip == bgmSourcePool.First.Value) return;
+        if (bgmSourcePool.Count <= 0) bgmSourcePool.AddFirst(Instantiate(bgmPrefab, transform));
+        if (clip == bgmSourcePool.First.Value) return;
 
         bgmSourcePool.First.Value.DOKill();
         bgmSourcePool.First.Value.DOFade(0, fadeDuration);
