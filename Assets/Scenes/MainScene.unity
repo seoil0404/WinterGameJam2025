@@ -1398,8 +1398,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldManager
   playerTransform: {fileID: 1707788177}
-  loadDistance: 1000
-  generateObstacle: 0
+  loadDistance: 100
+  generateObstacle: 1
 --- !u!4 &478666938
 Transform:
   m_ObjectHideFlags: 0
@@ -2002,7 +2002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleManager
   obstacleData: {fileID: 11400000, guid: d666b6de8a4399d479124d28c0bf0cd5, type: 2}
-  obstacleOffset: {x: 0, y: 13, z: 0}
+  obstacleOffset: {x: 0, y: 11, z: 0}
   horizontalInterval: 5.5
 --- !u!1 &692717398
 GameObject:
