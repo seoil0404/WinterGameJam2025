@@ -1,16 +1,21 @@
+using System;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+[RequireComponent(typeof(Rigidbody), (typeof(CapsuleCollider)), (typeof(Animator)))]
+public partial class PlayerController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+	private Rigidbody m_rigidbody;
+	private Animator m_animator;
+	private void Awake()
+	{
+		m_rigidbody = GetComponent<Rigidbody>();
+		m_animator = GetComponent<Animator>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+		MovementAwake();
+	}
+	private void Update()
+	{
+		Move();
+		Jump();
+	}
 }
