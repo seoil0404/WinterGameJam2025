@@ -15,3 +15,6 @@ MonoBehaviour:
   TestObstacle: {fileID: 8930801286043321105, guid: 6f8b3c4454c631d4582028701a408619, type: 3}
   OrangeObstacle: {fileID: -6326062282397596436, guid: 91ec43d0e1066fc4e8e952e068e2bb68, type: 3}
   PineAppleObstacle: {fileID: 3535015843884369625, guid: 473f2e025bc95ca4c855625aebb34803, type: 3}
+  StarFruitObstacle: {fileID: 4917894177175014973, guid: 578e3d8875ddf2247883dd723e41736f, type: 3}
+  AvocadoObstacle: {fileID: 2166352899578614369, guid: b146db60029803347b3d691db27db846, type: 3}
+  RabbitAppleObstacle: {fileID: -45195983540506238, guid: 7ecbda10ff91b1d4b8cc37c12cd763c9, type: 3}
