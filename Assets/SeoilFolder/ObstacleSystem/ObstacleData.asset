@@ -19,3 +19,5 @@ MonoBehaviour:
   AvocadoObstacle: {fileID: 2166352899578614369, guid: b146db60029803347b3d691db27db846, type: 3}
   RabbitAppleObstacle: {fileID: -45195983540506238, guid: 7ecbda10ff91b1d4b8cc37c12cd763c9, type: 3}
   MixBerryObstacle: {fileID: 2701810032236112420, guid: a04aa2109eab13b409e6a461fe7814af, type: 3}
+  WaterMelonObstacle: {fileID: -6605906802532724010, guid: 7959b3352166e02468d780508fbe7f8e, type: 3}
+  CoconutObstacle: {fileID: -1809150576591168500, guid: ed14b926952cc9140b0ed46e3ea848ab, type: 3}

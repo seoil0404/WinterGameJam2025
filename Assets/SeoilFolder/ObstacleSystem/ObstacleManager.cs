@@ -18,6 +18,6 @@ public class ObstacleManager : MonoBehaviour
 
     public void GenerateObstacle()
     {
-        Instantiate(obstacleData.MixBerryObstacle).Initialize(MapManager.RecentMapPosition);
+        Instantiate(obstacleData.StarFruitObstacle).Initialize(MapManager.RecentMapPosition);
     }
 }
