@@ -4,4 +4,5 @@ using UnityEngine;
 public class ObstacleData : ScriptableObject
 {
     public Obstacle TestObstacle;
+    public Obstacle OrangeObstacle; 
 }
