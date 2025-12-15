@@ -3,36 +3,40 @@ using UnityEngine;
 public class PauseManager : MonoBehaviour
 {
     [Header("UI")]
-    [SerializeField] private GameObject SettingUI;
+    [SerializeField] private GameObject pauseUI;
 
     private bool isPaused = false;
 
-    void Start()
+    private void Start()
     {
+        // 시작 시 Pause UI 비활성화
+        pauseUI.SetActive(false);
         Time.timeScale = 1f;
-        SettingUI.SetActive(false);
-        isPaused = false;
     }
-    public void OnClickInGameSetting()
+
+    /// <summary>
+    /// Pause 버튼 클릭 시 호출
+    /// </summary>
+    public void PauseGame()
     {
         if (isPaused)
             return;
 
-        PauseGame();
-    }
-
-    /// 게임 일시정지
-
-    private void PauseGame()
-    {
         isPaused = true;
-        Time.timeScale = 0f;   
-        SettingUI.SetActive(true);    
+        Time.timeScale = 0f;
+        pauseUI.SetActive(true);
     }
+
+    /// <summary>
+    /// Resume 버튼 클릭 시 호출
+    /// </summary>
     public void ResumeGame()
     {
+        if (!isPaused)
+            return;
+
         isPaused = false;
-        Time.timeScale = 1f;  
-        SettingUI.SetActive(false);  
+        Time.timeScale = 1f;
+        pauseUI.SetActive(false);
     }
 }
