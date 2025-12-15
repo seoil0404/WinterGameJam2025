@@ -9,4 +9,5 @@ public class ObstacleData : ScriptableObject
     public Obstacle StarFruitObstacle;
     public Obstacle AvocadoObstacle;
     public Obstacle RabbitAppleObstacle;
+    public Obstacle MixBerryObstacle;
 }

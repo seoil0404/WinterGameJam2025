@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: c3095a6495641c745a2eb773e77b36d4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - normalMixBerry: {fileID: 429501713890857034, guid: 5b6033e007aba8747a154c6996d6ff3f, type: 3}
+  - specialMixBerry: {fileID: -6456510499028898022, guid: f6057e3d6b9b324419b6d1d107232c12, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

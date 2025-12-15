@@ -18,3 +18,4 @@ MonoBehaviour:
   StarFruitObstacle: {fileID: 4917894177175014973, guid: 578e3d8875ddf2247883dd723e41736f, type: 3}
   AvocadoObstacle: {fileID: 2166352899578614369, guid: b146db60029803347b3d691db27db846, type: 3}
   RabbitAppleObstacle: {fileID: -45195983540506238, guid: 7ecbda10ff91b1d4b8cc37c12cd763c9, type: 3}
+  MixBerryObstacle: {fileID: 2701810032236112420, guid: a04aa2109eab13b409e6a461fe7814af, type: 3}
