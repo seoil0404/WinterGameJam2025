@@ -13,13 +13,7 @@ public class PauseUI : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         DontDestroyOnLoad(SettingUI);
     }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape) && !title)
-        {
-            //PauseUI.SetActive(!PauseUI.activeSelf);
-        }
-    }
+
     public void closeUi()
     {
         pauseUI.SetActive(false);
