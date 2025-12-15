@@ -485,7 +485,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 127791643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -494,8 +494,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -66, y: -233}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchoredPosition: {x: -66, y: -180}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &127791645
 MonoBehaviour:
@@ -974,7 +974,7 @@ RectTransform:
   m_Father: {fileID: 120782289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -2.657}
   m_SizeDelta: {x: 0, y: -5.314}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1201,6 +1201,7 @@ GameObject:
   - component: {fileID: 300485313}
   - component: {fileID: 300485312}
   - component: {fileID: 300485311}
+  - component: {fileID: 300485314}
   m_Layer: 5
   m_Name: Continue Button
   m_TagString: Untagged
@@ -1271,7 +1272,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 300485312}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 300485314}
+        m_TargetAssemblyTypeName: PauseUI, Assembly-CSharp
+        m_MethodName: closeUi
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &300485312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1310,6 +1323,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300485309}
   m_CullTransparentMesh: 1
+--- !u!114 &300485314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300485309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae88e5c6fa88264d97e0d32688c141a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseUI
+  pauseUI: {fileID: 0}
+  title: 0
+  SettingUI: {fileID: 0}
 --- !u!1 &300785468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1556,7 +1584,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 79, y: -74}
+  m_AnchoredPosition: {x: 80, y: -74}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &327280806
@@ -1910,7 +1938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5058824}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.68235296}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2525,7 +2553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &707003260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3530,7 +3558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472b53953eb1b7e43b14fe90568fe9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseManager
-  SettingUI: {fileID: 0}
+  SettingUI: {fileID: 1332818791}
 --- !u!4 &1095898580
 Transform:
   m_ObjectHideFlags: 0
@@ -3733,7 +3761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3790,8 +3818,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1957002796}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3921,6 +3949,7 @@ GameObject:
   - component: {fileID: 1273963263}
   - component: {fileID: 1273963262}
   - component: {fileID: 1273963261}
+  - component: {fileID: 1273963264}
   m_Layer: 5
   m_Name: Exit Button
   m_TagString: Untagged
@@ -3991,7 +4020,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1273963262}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1273963264}
+        m_TargetAssemblyTypeName: Quitmenu, Assembly-CSharp
+        m_MethodName: LoadMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1273963262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4030,6 +4071,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273963259}
   m_CullTransparentMesh: 1
+--- !u!114 &1273963264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273963259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a5e36a9c3a66d4aa8db6948b9e9347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Quitmenu
 --- !u!1 &1289651645
 GameObject:
   m_ObjectHideFlags: 0
@@ -4067,8 +4120,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -66, y: -150}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchoredPosition: {x: -66, y: -110}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1289651647
 MonoBehaviour:
@@ -4449,6 +4502,7 @@ GameObject:
   - component: {fileID: 1368764867}
   - component: {fileID: 1368764866}
   - component: {fileID: 1368764865}
+  - component: {fileID: 1368764868}
   m_Layer: 5
   m_Name: Setting Button
   m_TagString: Untagged
@@ -4519,7 +4573,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1368764866}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1368764868}
+        m_TargetAssemblyTypeName: SettingPopup, Assembly-CSharp
+        m_MethodName: OpenSetting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1368764866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4558,6 +4624,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368764863}
   m_CullTransparentMesh: 1
+--- !u!114 &1368764868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368764863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f468e381d3fe97c408778e4bfb97c966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingPopup
+  SettingUI: {fileID: 1332818791}
+  toggle: {fileID: 0}
 --- !u!1 &1377901531
 GameObject:
   m_ObjectHideFlags: 0
@@ -6098,8 +6178,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -66, y: -66}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchoredPosition: {x: -66, y: -45}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2109073591
 MonoBehaviour:
@@ -6218,6 +6298,6 @@ SceneRoots:
   - {fileID: 1429324118}
   - {fileID: 1095898580}
   - {fileID: 2061557518}
-  - {fileID: 1332818796}
   - {fileID: 707003264}
+  - {fileID: 1332818796}
   - {fileID: 565207481}
