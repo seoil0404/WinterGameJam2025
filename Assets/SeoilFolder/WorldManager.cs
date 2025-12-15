@@ -8,6 +8,8 @@ public class WorldManager : MonoBehaviour
 
     [SerializeField] private float loadDistance;
 
+    private int voidStack = 0;
+
     private void Awake()
     {
         Instance = this;
@@ -15,11 +17,19 @@ public class WorldManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(MapManager.RecentMapPosition - loadDistance);
-
         if(playerTransform.position.z >= MapManager.RecentMapPosition - loadDistance)
         {
-            MapManager.Instance.AddMap(MapType.Tangerine);
+            if(UnityEngine.Random.Range(0, 12) == 0 && voidStack == 0)
+            {
+                voidStack++;
+                MapManager.Instance.AddMap(MapType.Void);
+            }
+            else
+            {
+                voidStack = 0;
+                MapManager.Instance.AddMap(MapType.Tangerine);
+                ObstacleManager.Instance.GenerateObstacle();
+            }
         }
     }
 }

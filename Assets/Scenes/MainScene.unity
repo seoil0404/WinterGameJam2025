@@ -332,7 +332,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 27d7396c672b73844b1289503d0e6730, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1956459137}
   m_SourcePrefab: {fileID: 100100000, guid: 27d7396c672b73844b1289503d0e6730, type: 3}
 --- !u!1 &410087039
 GameObject:
@@ -346,7 +349,7 @@ GameObject:
   - component: {fileID: 410087040}
   - component: {fileID: 410087042}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: Directional Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -425,13 +428,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.20035823, y: 0.7979836, z: -0.37210584, w: -0.42966965}
+  m_LocalRotation: {x: 0.42101005, y: -0.07898997, z: 0.03683362, w: 0.90285903}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 886730901}
-  m_LocalEulerAnglesHint: {x: 50, y: 236.6, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -10, z: 0}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,7 +494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldManager
   playerTransform: {fileID: 1707788177}
-  loadDistance: 100
+  loadDistance: 1000
 --- !u!4 &478666938
 Transform:
   m_ObjectHideFlags: 0
@@ -550,6 +553,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 668169797}
+  - component: {fileID: 668169798}
   m_Layer: 0
   m_Name: ObstacleManager
   m_TagString: Untagged
@@ -572,6 +576,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 478666938}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &668169798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668169796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a9d77bcfc7e3e4fbb66903bf7f17af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleManager
+  obstacleData: {fileID: 11400000, guid: d666b6de8a4399d479124d28c0bf0cd5, type: 2}
+  obstacleOffset: {x: 0, y: 13, z: 0}
+  horizontalInterval: 5.5
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,6 +831,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707788176}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1956459133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 27d7396c672b73844b1289503d0e6730, type: 3}
+  m_PrefabInstance: {fileID: 385706285}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1956459137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956459133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb726855542b0240a5ca40769843852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OceanController
+  playerTransform: {fileID: 1707788177}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

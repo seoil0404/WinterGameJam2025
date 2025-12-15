@@ -1,18 +1,23 @@
 using UnityEngine;
 
-[RequireComponent(typeof(ObstacleGenerator))]
 public class ObstacleManager : MonoBehaviour
 {
     public static ObstacleManager Instance { get; private set; }
 
     [SerializeField] private ObstacleData obstacleData;
+    [SerializeField] private Vector3 obstacleOffset;
+    [SerializeField] private float horizontalInterval;
 
-    private ObstacleGenerator obstacleGenerator;
+    public Vector3 ObstacleOffset => obstacleOffset;
+    public float HorizontalInterval => horizontalInterval;
     
     private void Awake()
     {
         Instance = this;
+    }
 
-        obstacleGenerator = GetComponent<ObstacleGenerator>();
+    public void GenerateObstacle()
+    {
+        Instantiate(obstacleData.PineAppleObstacle).Initialize(MapManager.RecentMapPosition);
     }
 }
