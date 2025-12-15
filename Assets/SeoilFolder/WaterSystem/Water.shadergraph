@@ -1584,10 +1584,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 662.0000610351563,
-            "y": 395.0,
-            "width": 126.0,
-            "height": 118.00006103515625
+            "x": 610.666748046875,
+            "y": 402.0,
+            "width": 127.33331298828125,
+            "height": 120.0
         }
     },
     "m_Slots": [
@@ -4998,7 +4998,7 @@
     "m_Title": "Normal",
     "m_Position": {
         "x": -1862.0,
-        "y": 848.0000610351563
+        "y": 848.0001220703125
     }
 }
 
@@ -7383,7 +7383,7 @@
     "m_Title": "Wave",
     "m_Position": {
         "x": -1557.3333740234375,
-        "y": -1119.333251953125
+        "y": -1119.3333740234375
     }
 }
 
@@ -8897,10 +8897,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 472.0001525878906,
-            "y": 479.0000305175781,
-            "width": 163.99996948242188,
-            "height": 142.00003051757813
+            "x": 362.66668701171877,
+            "y": 489.3333740234375,
+            "width": 165.33343505859376,
+            "height": 144.00006103515626
         }
     },
     "m_Slots": [
@@ -9163,7 +9163,7 @@
     "m_AllowMaterialOverride": false,
     "m_SurfaceType": 1,
     "m_ZTestMode": 4,
-    "m_ZWriteControl": 2,
+    "m_ZWriteControl": 0,
     "m_AlphaMode": 0,
     "m_RenderFace": 2,
     "m_AlphaClip": false,
