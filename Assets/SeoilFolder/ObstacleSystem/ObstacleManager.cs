@@ -18,6 +18,6 @@ public class ObstacleManager : MonoBehaviour
 
     public void GenerateObstacle()
     {
-        Instantiate(obstacleData.PineAppleObstacle).Initialize(MapManager.RecentMapPosition);
+        Instantiate(obstacleData.AvocadoObstacle).Initialize(MapManager.RecentMapPosition);
     }
 }
