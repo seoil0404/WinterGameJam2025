@@ -5,6 +5,7 @@ public partial class PlayerController
 {
 	[Header("Movement")]
 	[SerializeField] private float m_moveSpeed;
+	[SerializeField] private float m_hMoveSpeed;
 	[SerializeField] private float m_jumpPorce;
    private void MovementAwake()
    {
@@ -16,7 +17,7 @@ public partial class PlayerController
 		float h = Input.GetAxisRaw("Horizontal");
 
 		Console.WriteLine(h);
-		m_rigidbody.linearVelocity = new Vector3(h * m_moveSpeed, m_rigidbody.linearVelocity.y, 1 * m_moveSpeed);
+		m_rigidbody.linearVelocity = new Vector3(h * m_hMoveSpeed, m_rigidbody.linearVelocity.y, m_moveSpeed);
 	}
 
 	private void Jump()
