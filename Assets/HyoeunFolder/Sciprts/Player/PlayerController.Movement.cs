@@ -4,75 +4,120 @@ using UnityEngine.InputSystem.LowLevel;
 
 public partial class PlayerController
 {
+	[Space(20)]
 	[Header("Movement")]
 	[SerializeField] private float m_moveSpeed;
 	[SerializeField] private float m_hMoveSpeed;
+
+	[Space(10)]
 	[SerializeField] private float m_jumpPorce;
+	[SerializeField] private float m_jumpLimitDelay;
 
-	[SerializeField] private Vector3 m_tiptoe;
-
+	[Space(10)]
+	[SerializeField] private float m_groundedRadius;
+	[SerializeField] private float m_groundedHeight;
+	[SerializeField] private LayerMask m_groundedLayer;
+	[SerializeField] private Transform m_groundedTiptoe;
 	private bool m_isGrounded;
-   private void MovementAwake()
-   {
+
+	[Space(10)]
+	[SerializeField] private float m_dashPorce;
+	[SerializeField] private float m_dashLimitDelay;
+
+	private bool m_isSit;
+	private bool m_isJumping;
+	private float m_leftJumpDelay;
+	public float MoveSpeed => m_moveSpeed;
+	private void MovementAwake()
+	{
 		m_isGrounded = true;
-   }
-   private void MovementUpdate()
-   {
+		m_leftJumpDelay = 0;
+		m_isSit = false;
+	}
+	private void MovementUpdate()
+	{
 		Move();
 		Sit();
 		GroundCheck();
 		Jump();
-   }
+	}
 
-   private void Move()
-   {
+	private void Move()
+	{
 		float h = Input.GetAxisRaw("Horizontal");
 
 		m_rigidbody.linearVelocity = new Vector3(h * m_hMoveSpeed, m_rigidbody.linearVelocity.y, m_moveSpeed);
 	}
-
-	private void GroundCheck()
-	{
-		if(!m_isGrounded)
-		{
-			//if()	
-
-			m_isGrounded = true;
-			m_animator.SetBool("Jump", false);
-		}
-	}
 	private void Jump()
 	{
-		if(Input.GetKeyDown(KeyCode.Space) && m_isGrounded)
+		if (Input.GetKey(KeyCode.Space) && m_isGrounded)
 		{
-			m_collider.height = m_collider.height / 2;
 			m_rigidbody.AddForce(Vector3.up * m_jumpPorce, ForceMode.Impulse);
+
+			m_leftJumpDelay = m_jumpLimitDelay;
 
 			m_isGrounded = false;
 			m_animator.SetBool("Sit", false);
 			m_animator.SetBool("Jump", true);
+
+			if (m_isSit) SitUp();
+		}
+	}
+
+	private void GroundCheck()
+	{
+		if (!m_isGrounded)
+		{
+			m_leftJumpDelay -= Time.deltaTime;
+			if (m_leftJumpDelay <= 0)
+			{
+				Vector3 radius = new Vector3(m_groundedRadius, m_groundedHeight, m_groundedRadius);
+				m_isGrounded = Physics.CheckBox(m_groundedTiptoe.position, radius, Quaternion.identity, m_groundedLayer);
+				if (m_isGrounded)
+				{
+					m_isGrounded = true;
+					m_animator.SetBool("Jump", false);
+					print(m_isGrounded);
+				}
+			}
 		}
 	}
 	private void Sit()
 	{
+		if (!m_isGrounded) return;
 		if (Input.GetKeyDown(KeyCode.LeftShift))
 		{
-			Vector3 scale = m_player.transform.localScale;
-			m_player.transform.localScale = new Vector3(scale.x, scale.y / 1.2f, scale.z);
-			m_collider.height = m_collider.height / 2;
-			m_collider.center = new Vector3(0, m_collider.center.y / 2 , m_collider.center.z);
-
-			m_animator.SetBool("Sit", true);
+			SitDown();	
 		}
-		else if (Input.GetKeyUp(KeyCode.LeftShift)) 
+		else if (Input.GetKeyUp(KeyCode.LeftShift))
 		{
-			Vector3 scale = m_player.transform.localScale;
-			m_player.transform.localScale = new Vector3(scale.x, scale.y * 1.2f, scale.z);
-			m_collider.height = m_collider.height * 2;
-			m_collider.center = new Vector3(0, m_collider.center.y * 2, m_collider.center.z);
-
-			m_animator.SetBool("Sit", false);
+			SitUp();
 		}
+	}
+	private void SitDown()
+	{
+		Debug.Log("앉아요");
 
+		Vector3 scale = m_player.transform.localScale;
+		m_player.transform.localScale = new Vector3(scale.x, scale.y / 1.2f, scale.z);
+		m_collider.height = m_collider.height / 2;
+		m_collider.center = new Vector3(0, m_collider.center.y / 2, m_collider.center.z);
+
+		m_animator.SetBool("Sit", true);
+
+		m_isSit = true;
+	}
+	private void SitUp()
+	{
+		Debug.Log("일어나요");
+		Vector3 scale = m_player.transform.localScale;
+		m_player.transform.localScale = new Vector3(scale.x, scale.y * 1.2f, scale.z);
+
+		m_collider.height = m_collider.height * 2;
+		m_collider.center = new Vector3(0, m_collider.center.y * 2, m_collider.center.z);
+
+		m_animator.SetBool("Sit", false);
+
+		m_isSit = false;
 	}
 }
