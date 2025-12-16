@@ -18,6 +18,11 @@ public class WorldManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        MapManager.Instance.AddMap(MapType.Tangerine);
+    }
+
     private void Update()
     {
         if(playerTransform.position.z >= MapManager.RecentMapPosition - loadDistance)

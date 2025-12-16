@@ -1887,7 +1887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7186629116089623404, guid: 60f65ba4373daaf49b4128e4f8fd32fb, type: 3}
       propertyPath: m_jumpPorce
-      value: 12
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
