@@ -5,7 +5,6 @@ using UnityEngine;
 public class ObstacleData : ScriptableObject
 {
     public Obstacle PineAppleObstacle;
-    public Obstacle StarFruitObstacle;
     public Obstacle CoconutObstacle;
     public Obstacle CherryObstacle;
     public Obstacle BananaObstacle;
@@ -16,8 +15,8 @@ public class ObstacleData : ScriptableObject
     public Obstacle MixBerryObstacle;
     public Obstacle WaterMelonObstacle;
 
-    public List<Obstacle> NormalObstacle => new List<Obstacle> { PineAppleObstacle, StarFruitObstacle, CoconutObstacle, CherryObstacle, BananaObstacle };
-    public List<Obstacle> AllObstacles => new List<Obstacle> { PineAppleObstacle, StarFruitObstacle, CoconutObstacle, CherryObstacle, BananaObstacle, OrangeObstacle, AvocadoObstacle, RabbitAppleObstacle, MixBerryObstacle, WaterMelonObstacle };
+    public List<Obstacle> NormalObstacle => new List<Obstacle> { PineAppleObstacle, CoconutObstacle, CherryObstacle, BananaObstacle };
+    public List<Obstacle> AllObstacles => new List<Obstacle> { PineAppleObstacle, CoconutObstacle, CherryObstacle, BananaObstacle, OrangeObstacle, AvocadoObstacle, RabbitAppleObstacle, MixBerryObstacle, WaterMelonObstacle };
 
     public Obstacle GetRandomObstacle(List<Obstacle> obstacles)
     {
