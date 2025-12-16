@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 9, y: 9, z: 9}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3858006150239132310}
@@ -107,7 +107,8 @@ MonoBehaviour:
   coconutVFX: {fileID: 3858006150239132309}
   coconutDust: {fileID: 5112054213284246401, guid: 5de378093d01f1748a644c9832d30c89, type: 3}
   groundOffset: 10.5
-  fallOffset: 8
+  fallOffset: 1
+  fallSpeed: 2
 --- !u!1001 &7120456642230689399
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1889,6 +1889,10 @@ PrefabInstance:
       propertyPath: m_jumpPorce
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7186629116089623404, guid: 60f65ba4373daaf49b4128e4f8fd32fb, type: 3}
+      propertyPath: m_moveSpeed
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2778,6 +2782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapManager
   tangerinePrefab: {fileID: 1692631664873258443, guid: c8726974069a6a64183443220fd64a58, type: 3}
+  voidTangerinePrefab: {fileID: 8166962779123849064, guid: 5f830622dab5ccc4786c415675914985, type: 3}
   tangerineQueueCount: 100
   positionOffset: {x: 0, y: 8.66, z: 0}
 --- !u!4 &895282838
@@ -5227,7 +5232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb726855542b0240a5ca40769843852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OceanController
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 544431825}
 --- !u!1 &2003258780
 GameObject:
   m_ObjectHideFlags: 0
