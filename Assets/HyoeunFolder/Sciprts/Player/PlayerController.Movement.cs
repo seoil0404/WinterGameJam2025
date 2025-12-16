@@ -52,6 +52,8 @@ public partial class PlayerController
 	{
 		if (Input.GetKeyDown(KeyCode.Space) && (m_isGrounded || m_jumpCount < 2))
 		{
+			m_rigidbody.linearVelocity = new Vector3(m_rigidbody.linearVelocity.x, 0, m_rigidbody.linearVelocity.z);
+
 			m_rigidbody.AddForce(Vector3.up * m_jumpPorce, ForceMode.Impulse);
 
 			m_leftJumpDelay = m_jumpLimitDelay;
