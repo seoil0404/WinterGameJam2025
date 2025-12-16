@@ -1,18 +1,18 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
-    [Header("UI")]
-    [SerializeField] private GameObject SettingUI;
-
+    [SerializeField] private GameObject settingUI;
     private bool isPaused = false;
 
     void Start()
     {
         Time.timeScale = 1f;
-        SettingUI.SetActive(false);
+        settingUI.SetActive(false);
         isPaused = false;
     }
+
     public void OnClickInGameSetting()
     {
         if (isPaused)
@@ -21,18 +21,26 @@ public class PauseManager : MonoBehaviour
         PauseGame();
     }
 
-    /// 게임 일시정지
-
     private void PauseGame()
     {
         isPaused = true;
-        Time.timeScale = 0f;   
-        SettingUI.SetActive(true);    
+        Time.timeScale = 0f;
+        settingUI.SetActive(true);
     }
+
     public void ResumeGame()
     {
         isPaused = false;
-        Time.timeScale = 1f;  
-        SettingUI.SetActive(false);  
+        Time.timeScale = 1f;
+        settingUI.SetActive(false);
+    }
+
+    public void ExitGame(string sceneName)
+    {
+        Time.timeScale = 1f;
+        isPaused = false;
+
+        settingUI.SetActive(false);
+        SceneManager.LoadScene(sceneName);
     }
 }

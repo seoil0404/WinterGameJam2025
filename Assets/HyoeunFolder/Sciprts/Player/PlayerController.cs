@@ -6,6 +6,7 @@ public partial class PlayerController : MonoBehaviour
 {
 	private Rigidbody m_rigidbody;
 	private Animator m_animator;
+	private CapsuleCollider m_collider;
 	private void Awake()
 	{
 		m_rigidbody = GetComponent<Rigidbody>();
