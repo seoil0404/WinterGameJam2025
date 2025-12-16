@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3858006150239132310}
@@ -104,6 +104,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: decb0c28f937cab4cb9d48791651ff65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoconutObstacle
+  coconutVFX: {fileID: 3858006150239132309}
+  coconutDust: {fileID: 5112054213284246401, guid: 5de378093d01f1748a644c9832d30c89, type: 3}
+  groundOffset: 10.5
+  fallOffset: 8
 --- !u!1001 &7120456642230689399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -161,6 +165,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
+--- !u!198 &3858006150239132309 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6294508013172393186, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
+  m_PrefabInstance: {fileID: 7120456642230689399}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3858006150239132310 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6294508013172393185, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
