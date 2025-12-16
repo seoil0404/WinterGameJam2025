@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: cb98efe72b501d44392d528992053dd2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cb98efe72b501d44392d528992053dd2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cb98efe72b501d44392d528992053dd2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cb98efe72b501d44392d528992053dd2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.05547
       objectReference: {fileID: 0}
@@ -138,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   m_moveSpeed: 30
   m_hMoveSpeed: 20
-  m_jumpPorce: 10
+  m_jumpPorce: 20
 --- !u!95 &6782160249424328294
 Animator:
   serializedVersion: 7
