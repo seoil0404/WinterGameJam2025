@@ -55,20 +55,18 @@ public class MapManager : MonoBehaviour
                 currentMapCount++;
 
                 break;
+
             case MapType.Void:
 
-                if(UnityEngine.Random.Range(0, 2) == 0)
-                {
-                    Map voidTangerine;
+                Map voidTangerine;
 
-                    if (tangerineQueue.Count > tangerineQueueCount)
-                        voidTangerine = voidTangerineQueue.Dequeue();
-                    else
-                        voidTangerine = Instantiate(voidTangerinePrefab, transform);
+                if (tangerineQueue.Count > tangerineQueueCount)
+                    voidTangerine = voidTangerineQueue.Dequeue();
+                else
+                    voidTangerine = Instantiate(voidTangerinePrefab, transform);
 
-                    voidTangerine.transform.position = positionOffset + new Vector3(0, 0, TangerineLength * currentMapCount);
-                    voidTangerineQueue.Enqueue(voidTangerine);
-                }
+                voidTangerine.transform.position = positionOffset + new Vector3(0, 0, TangerineLength * currentMapCount);
+                voidTangerineQueue.Enqueue(voidTangerine);
 
                 currentMapCount++;
 
