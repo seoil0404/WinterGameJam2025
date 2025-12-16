@@ -2,6 +2,8 @@ using UnityEngine;
 
 public abstract class Obstacle : MonoBehaviour
 {
+    public abstract float SpawnWeight { get; }
+
     public abstract void Initialize(float position);
 
     protected void SetRandomLinedPosition(float position)

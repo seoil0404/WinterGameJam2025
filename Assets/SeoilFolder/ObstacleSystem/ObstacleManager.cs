@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ObstacleManager : MonoBehaviour
@@ -10,6 +11,8 @@ public class ObstacleManager : MonoBehaviour
 
     public Vector3 ObstacleOffset => obstacleOffset;
     public float HorizontalInterval => horizontalInterval;
+
+    private int bigObstacleStack = 0;
     
     private void Awake()
     {
@@ -18,6 +21,33 @@ public class ObstacleManager : MonoBehaviour
 
     public void GenerateObstacle()
     {
-        Instantiate(obstacleData.StarFruitObstacle).Initialize(MapManager.RecentMapPosition);
+        //Instantiate(obstacleData.MixBerryObstacle).Initialize(MapManager.RecentMapPosition);
+        //return;
+
+        if (WorldManager.Instance.VoidStack > 0)
+        {
+            Obstacle selected = obstacleData.GetRandomObstacle(obstacleData.NormalObstacle);
+
+            Instantiate(selected).Initialize(MapManager.RecentMapPosition);
+        }
+        else
+        {
+            Obstacle selected;
+
+            if (bigObstacleStack > 0)
+            {
+                 selected = obstacleData.GetRandomObstacle(obstacleData.NormalObstacle);
+                bigObstacleStack = 0;
+            }
+            else
+            {
+                selected = obstacleData.GetRandomObstacle(obstacleData.AllObstacles);
+                if (!obstacleData.NormalObstacle.Contains(selected))
+                    bigObstacleStack++;
+            }
+
+            Instantiate(selected).Initialize(MapManager.RecentMapPosition);
+        }
+        
     }
 }

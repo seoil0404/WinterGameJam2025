@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PineAppleObstacle : Obstacle
 {
+    public override float SpawnWeight => 1;
+
     public override void Initialize(float position)
     {
         transform.position = new Vector3(
