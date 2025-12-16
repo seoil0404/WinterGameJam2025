@@ -68,19 +68,16 @@ public partial class PlayerController
 
 	private void GroundCheck()
 	{
-		if (!m_isGrounded)
+		m_leftJumpDelay -= Time.deltaTime;
+		if (m_leftJumpDelay <= 0)
 		{
-			m_leftJumpDelay -= Time.deltaTime;
-			if (m_leftJumpDelay <= 0)
+			Vector3 radius = new Vector3(m_groundedRadius, m_groundedHeight, m_groundedRadius);
+			m_isGrounded = Physics.CheckBox(m_groundedTiptoe.position, radius, Quaternion.identity, m_groundedLayer);
+			if (m_isGrounded)
 			{
-				Vector3 radius = new Vector3(m_groundedRadius, m_groundedHeight, m_groundedRadius);
-				m_isGrounded = Physics.CheckBox(m_groundedTiptoe.position, radius, Quaternion.identity, m_groundedLayer);
-				if (m_isGrounded)
-				{
-					m_isGrounded = true;
-					m_animator.SetBool("Jump", false);
-					m_jumpCount = 0;
-				}
+				m_isGrounded = true;
+				m_animator.SetBool("Jump", false);
+				m_jumpCount = 0;
 			}
 		}
 	}
