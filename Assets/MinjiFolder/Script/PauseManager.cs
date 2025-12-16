@@ -1,42 +1,46 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
-    [Header("UI")]
-    [SerializeField] private GameObject pauseUI;
-
+    [SerializeField] private GameObject settingUI;
     private bool isPaused = false;
 
-    private void Start()
+    void Start()
     {
-        // 시작 시 Pause UI 비활성화
-        pauseUI.SetActive(false);
         Time.timeScale = 1f;
+        settingUI.SetActive(false);
+        isPaused = false;
     }
 
-    /// <summary>
-    /// Pause 버튼 클릭 시 호출
-    /// </summary>
-    public void PauseGame()
+    public void OnClickInGameSetting()
     {
         if (isPaused)
             return;
 
-        isPaused = true;
-        Time.timeScale = 0f;
-        pauseUI.SetActive(true);
+        PauseGame();
     }
 
-    /// <summary>
-    /// Resume 버튼 클릭 시 호출
-    /// </summary>
+    private void PauseGame()
+    {
+        isPaused = true;
+        Time.timeScale = 0f;
+        settingUI.SetActive(true);
+    }
+
     public void ResumeGame()
     {
-        if (!isPaused)
-            return;
-
         isPaused = false;
         Time.timeScale = 1f;
-        pauseUI.SetActive(false);
+        settingUI.SetActive(false);
+    }
+
+    public void ExitGame(string sceneName)
+    {
+        Time.timeScale = 1f;
+        isPaused = false;
+
+        settingUI.SetActive(false);
+        SceneManager.LoadScene(sceneName);
     }
 }
