@@ -7,7 +7,9 @@ public partial class PlayerController
 	[Space(20)]
 	[Header("Movement")]
 	[SerializeField] private float m_moveSpeed;
+	[SerializeField] private float m_maxMoveSpeed;
 	[SerializeField] private float m_hMoveSpeed;
+	[SerializeField] private float m_sppedUpPercent;
 
 	[Space(10)]
 	[SerializeField] private float m_jumpPorce;
@@ -41,6 +43,7 @@ public partial class PlayerController
 		Sit();
 		GroundCheck();
 		Jump();
+		SpeedUp();
 	}
 
 	private void Move()
@@ -67,7 +70,6 @@ public partial class PlayerController
 			if (m_isSit) SitUp();
 		}
 	}
-
 	private void GroundCheck()
 	{
 		m_leftJumpDelay -= Time.deltaTime;
@@ -120,5 +122,11 @@ public partial class PlayerController
 		m_animator.SetBool("Sit", false);
 
 		m_isSit = false;
+	}
+
+	private void SpeedUp()
+	{
+		if (m_moveSpeed >= m_maxMoveSpeed) return;
+		m_moveSpeed += m_sppedUpPercent * Time.deltaTime;
 	}
 }

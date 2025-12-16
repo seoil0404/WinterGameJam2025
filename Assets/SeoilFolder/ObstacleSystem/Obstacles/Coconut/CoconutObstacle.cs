@@ -7,6 +7,7 @@ public class CoconutObstacle : Obstacle
     [SerializeField] private ParticleSystem coconutDust;
     [SerializeField] private float groundOffset = 10.5f;
     [SerializeField] private float fallOffset;
+    [SerializeField] private float fallSpeed;
 
     public override float SpawnWeight => 1;
 
@@ -42,9 +43,9 @@ public class CoconutObstacle : Obstacle
         float yPosition;
 
         if (PlayerController.Instance != null)
-            yPosition = transform.position.z - PlayerController.Instance.transform.position.z + groundOffset;
+            yPosition = fallSpeed * (transform.position.z - PlayerController.Instance.transform.position.z) + groundOffset - fallOffset * PlayerController.Instance.MoveSpeed;
         else 
-            yPosition = transform.position.z - CubeController.Instance.transform.position.z + groundOffset - fallOffset;
+            yPosition = fallSpeed * (transform.position.z - CubeController.Instance.transform.position.z) + groundOffset - fallOffset;
 
         transform.position = new Vector3(transform.position.x, yPosition, transform.position.z);
 

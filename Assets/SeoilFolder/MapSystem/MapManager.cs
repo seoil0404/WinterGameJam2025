@@ -15,11 +15,13 @@ public class MapManager : MonoBehaviour
     public static float RecentMapPosition { get; private set; } = 0;
 
     [SerializeField] private Map tangerinePrefab;
+    [SerializeField] private Map voidTangerinePrefab;
     [SerializeField] private int tangerineQueueCount;
 
     [SerializeField] private Vector3 positionOffset;
 
     private Queue<Map> tangerineQueue = new();
+    private Queue<Map> voidTangerineQueue = new();
     private int currentMapCount = 0;
 
     private void Awake()
@@ -53,7 +55,18 @@ public class MapManager : MonoBehaviour
                 currentMapCount++;
 
                 break;
+
             case MapType.Void:
+
+                Map voidTangerine;
+
+                if (tangerineQueue.Count > tangerineQueueCount)
+                    voidTangerine = voidTangerineQueue.Dequeue();
+                else
+                    voidTangerine = Instantiate(voidTangerinePrefab, transform);
+
+                voidTangerine.transform.position = positionOffset + new Vector3(0, 0, TangerineLength * currentMapCount);
+                voidTangerineQueue.Enqueue(voidTangerine);
 
                 currentMapCount++;
 
