@@ -25,7 +25,6 @@ public class PauseManager : MonoBehaviour
     {
         isPaused = true;
         Time.timeScale = 0f;
-        print("asd");
         settingUI.SetActive(true);
     }
 
