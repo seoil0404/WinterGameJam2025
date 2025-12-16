@@ -25,7 +25,7 @@ public partial class PlayerController
 	[SerializeField] private float m_dashLimitDelay;
 
 	private bool m_isSit;
-	private bool m_isJumping;
+	private int m_jumpCount;
 	private float m_leftJumpDelay;
 	public float MoveSpeed => m_moveSpeed;
 	private void MovementAwake()
@@ -33,6 +33,7 @@ public partial class PlayerController
 		m_isGrounded = true;
 		m_leftJumpDelay = 0;
 		m_isSit = false;
+		m_jumpCount = 0;
 	}
 	private void MovementUpdate()
 	{
@@ -45,18 +46,19 @@ public partial class PlayerController
 	private void Move()
 	{
 		float h = Input.GetAxisRaw("Horizontal");
-
 		m_rigidbody.linearVelocity = new Vector3(h * m_hMoveSpeed, m_rigidbody.linearVelocity.y, m_moveSpeed);
 	}
 	private void Jump()
 	{
-		if (Input.GetKey(KeyCode.Space) && m_isGrounded)
+		if (Input.GetKeyDown(KeyCode.Space) && (m_isGrounded || m_jumpCount < 2))
 		{
 			m_rigidbody.AddForce(Vector3.up * m_jumpPorce, ForceMode.Impulse);
 
 			m_leftJumpDelay = m_jumpLimitDelay;
-
 			m_isGrounded = false;
+			m_jumpCount++;
+			print(m_jumpCount);
+
 			m_animator.SetBool("Sit", false);
 			m_animator.SetBool("Jump", true);
 
@@ -77,7 +79,7 @@ public partial class PlayerController
 				{
 					m_isGrounded = true;
 					m_animator.SetBool("Jump", false);
-					print(m_isGrounded);
+					m_jumpCount = 0;
 				}
 			}
 		}
@@ -85,11 +87,11 @@ public partial class PlayerController
 	private void Sit()
 	{
 		if (!m_isGrounded) return;
-		if (Input.GetKeyDown(KeyCode.LeftShift))
+		if (Input.GetKeyDown(KeyCode.S) && !m_isSit)
 		{
 			SitDown();	
 		}
-		else if (Input.GetKeyUp(KeyCode.LeftShift))
+		else if (Input.GetKeyUp(KeyCode.S) && m_isSit)
 		{
 			SitUp();
 		}
