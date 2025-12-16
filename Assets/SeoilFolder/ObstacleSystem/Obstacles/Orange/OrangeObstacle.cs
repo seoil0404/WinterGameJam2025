@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class OrangeObstacle : Obstacle
 {
+    public override float SpawnWeight => 1;
+
     public override void Initialize(float position)
     {
         //SetRandomLinedPosition(position);

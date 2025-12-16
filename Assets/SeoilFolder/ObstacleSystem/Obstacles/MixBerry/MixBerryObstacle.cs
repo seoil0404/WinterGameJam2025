@@ -11,9 +11,11 @@ public class MixBerryObstacle : Obstacle
 
     private const int specialMixBerryCount = 3;
 
+    public override float SpawnWeight => 1;
+
     public override void Initialize(float position)
     {
-        transform.position = new Vector3(0, 19f, position);
+        transform.position = new Vector3(0, 16.4f, position);
 
         List<(int x, int y)> pool = new List<(int, int)>();
 
@@ -25,6 +27,7 @@ public class MixBerryObstacle : Obstacle
         {
             int randomIndex = UnityEngine.Random.Range(0, pool.Count);
             GenerateSpecialBerry(pool[randomIndex]);
+            pool.RemoveAt(randomIndex);
         }
 
         foreach(var coordinate in pool)

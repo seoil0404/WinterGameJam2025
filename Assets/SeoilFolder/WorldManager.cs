@@ -11,6 +11,8 @@ public class WorldManager : MonoBehaviour
 
     private int voidStack = 0;
 
+    public int VoidStack => voidStack;
+
     private void Awake()
     {
         Instance = this;
@@ -33,9 +35,9 @@ public class WorldManager : MonoBehaviour
             }
             else
             {
-                voidStack = 0;
                 MapManager.Instance.AddMap(MapType.Tangerine);
                 ObstacleManager.Instance.GenerateObstacle();
+                voidStack = 0;
             }
         }
     }

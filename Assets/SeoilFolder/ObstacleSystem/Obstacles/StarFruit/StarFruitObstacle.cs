@@ -5,6 +5,8 @@ public class StarFruitObstacle : Obstacle
     [SerializeField] private float heightOffset;
     [SerializeField] private float fallSpeed;
 
+    public override float SpawnWeight => 1;
+
     public override void Initialize(float position)
     {
         SetRandomLinedPosition(position);
