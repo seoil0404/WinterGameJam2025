@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class MixBerryObstacle : Obstacle
 {
-    [SerializeField] private MixBerry normalMixBerry;
-    [SerializeField] private MixBerry specialMixBerry;
+    [SerializeField] private MixBerry blueBerry;
+    [SerializeField] private MixBerry raspBerry;
     [SerializeField] private float xInterval;
     [SerializeField] private float yInterval;
 
-    private const int specialMixBerryCount = 3;
+    private const int RaspBerryCount = 3;
+    private int currentRaspBerryCount = RaspBerryCount;
+
+    private List<MixBerry> blueBerryList = new();
 
     public override float SpawnWeight => 1;
 
@@ -19,30 +22,53 @@ public class MixBerryObstacle : Obstacle
 
         List<(int x, int y)> pool = new List<(int, int)>();
 
-        for (int x = -2; x <= 2; x++)
+        for (int x = -3; x <= 3; x++)
             for (int y = -2; y <= 2; y++)
                 pool.Add((x, y));
 
-        for(int index = 0; index < specialMixBerryCount; index++)
+        for(int index = 0; index < RaspBerryCount; index++)
         {
             int randomIndex = UnityEngine.Random.Range(0, pool.Count);
-            GenerateSpecialBerry(pool[randomIndex]);
+            GenerateRaspBerry(pool[randomIndex]);
             pool.RemoveAt(randomIndex);
         }
 
         foreach(var coordinate in pool)
-            GenerateNormalBerry(coordinate);
+            GenerateBlueBerry(coordinate);
     }
 
-    private void GenerateSpecialBerry((int x, int y) coordinate)
+    private void GenerateRaspBerry((int x, int y) coordinate)
     {
-        MixBerry newBerry = Instantiate(specialMixBerry, transform);
+        MixBerry newBerry = Instantiate(raspBerry, transform);
+        newBerry.Initialize(this);
         newBerry.transform.localPosition = new Vector3(xInterval * coordinate.x, yInterval * coordinate.y, 0);
     }
 
-    private void GenerateNormalBerry((int x, int y) coordinate)
+    private void GenerateBlueBerry((int x, int y) coordinate)
     {
-        MixBerry newBerry = Instantiate(normalMixBerry, transform);
+        MixBerry newBerry = Instantiate(blueBerry, transform);
+        newBerry.Initialize(this);
         newBerry.transform.localPosition = new Vector3(xInterval * coordinate.x, yInterval * coordinate.y, 0);
+        blueBerryList.Add(newBerry);
+    }
+
+    public void OnRaspBerryDestroyed()
+    {
+        currentRaspBerryCount--;
+
+        if(currentRaspBerryCount == 0)
+        {
+            DestroyObstacle();
+        }
+    }
+
+    private void DestroyObstacle()
+    {
+        foreach(MixBerry mixBerry in blueBerryList)
+        {
+            Destroy(mixBerry.gameObject);
+        }
+
+        Destroy(gameObject);
     }
 }

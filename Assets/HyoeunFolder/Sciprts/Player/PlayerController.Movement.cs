@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
@@ -10,6 +11,8 @@ public partial class PlayerController
 	[SerializeField] private float m_maxMoveSpeed;
 	[SerializeField] private float m_hMoveSpeed;
 	[SerializeField] private float m_sppedUpPercent;
+	[SerializeField] private float m_rotateScale;
+	[SerializeField] private Transform m_body;
 
 	[Space(10)]
 	[SerializeField] private float m_jumpPorce;
@@ -50,6 +53,17 @@ public partial class PlayerController
 	{
 		float h = Input.GetAxisRaw("Horizontal");
 		m_rigidbody.linearVelocity = new Vector3(h * m_hMoveSpeed, m_rigidbody.linearVelocity.y, m_moveSpeed);
+
+		if (m_isAiming)
+		{
+			Vector3 rotation = new Vector3(m_body.rotation.eulerAngles.x, m_playerCamera.transform.rotation.eulerAngles.y, 0);
+			m_player.transform.rotation = Quaternion.Euler(rotation);
+			return;
+		}
+
+		if (h > 0) m_body.rotation = Quaternion.Euler(new Vector3(0, m_rotateScale, 0));
+		else if (h < 0) m_body.rotation = Quaternion.Euler(new Vector3(0, -m_rotateScale, 0));
+		else m_body.rotation = Quaternion.Euler(Vector3.zero);
 	}
 	private void Jump()
 	{
@@ -99,8 +113,6 @@ public partial class PlayerController
 	}
 	private void SitDown()
 	{
-		Debug.Log("앉아요");
-
 		Vector3 scale = m_player.transform.localScale;
 		m_player.transform.localScale = new Vector3(scale.x, scale.y / 1.2f, scale.z);
 		m_collider.height = m_collider.height / 2;
@@ -112,7 +124,6 @@ public partial class PlayerController
 	}
 	private void SitUp()
 	{
-		Debug.Log("일어나요");
 		Vector3 scale = m_player.transform.localScale;
 		m_player.transform.localScale = new Vector3(scale.x, scale.y * 1.2f, scale.z);
 
