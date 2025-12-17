@@ -23,6 +23,7 @@ public class PlayerCamera : MonoBehaviour
 		m_mouseX = 0;
 		m_mouseY = 0;
 		m_canRotate = false;
+		m_lerpChangeTime = 0;
 	}
 	public void Init(float pSens, float pChangeTime, Vector3 pStartPos, Transform pPlayer)
 	{
@@ -33,7 +34,9 @@ public class PlayerCamera : MonoBehaviour
 	}
 	public void SetTarget(Transform pTarget, bool pRotation)
     {
-        m_targetTransform = pTarget;
+		m_lerpChangeTime = 0;
+
+		m_targetTransform = pTarget;
 		m_canRotate = pRotation;
 
 		this.transform.rotation = m_targetTransform.transform.rotation;
@@ -41,11 +44,12 @@ public class PlayerCamera : MonoBehaviour
     }
 	private void Update()
 	{
-		if (Vector3.Distance(m_targetTransform.position, this.transform.position) < 0.1f) m_isLerpChanging = false;
-		if (m_isLerpChanging)
+		if (Vector3.Distance(m_targetTransform.position, this.transform.position) > 0.1f)
 		{
 			m_lerpChangeTime += Time.deltaTime;
+			print(m_lerpChangeTime);
 			float time = m_lerpChangeTime / m_changeTime;
+			print(Vector3.Lerp(transform.position, m_targetTransform.position, time));
 			transform.position = Vector3.Lerp(transform.position, m_targetTransform.position, time);
 		}
 		else this.transform.position = m_targetTransform.position;
