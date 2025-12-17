@@ -45,7 +45,6 @@ public class Player : MonoBehaviour
         move.y = rb.linearVelocity.y;
         transform.forward = move;
         rb.linearVelocity = move;
-        print(move);
         
         Vector3 direction = new Vector3(x * Speed, rb.linearVelocity.y, z * Speed);
         //transform.position += move * Speed * Time.deltaTime;
