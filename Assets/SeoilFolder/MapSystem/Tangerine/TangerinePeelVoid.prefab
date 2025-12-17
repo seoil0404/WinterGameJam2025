@@ -85,6 +85,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d6bf67304eceb0a40a30ffdd61a2e92a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 415434761616826195}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d6bf67304eceb0a40a30ffdd61a2e92a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6339094513536316519}
   m_SourcePrefab: {fileID: 100100000, guid: d6bf67304eceb0a40a30ffdd61a2e92a, type: 3}
 --- !u!1 &5935675847177248852 stripped
 GameObject:
@@ -145,3 +148,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0075, y: 0.019409731, z: 0.00653172}
   m_Center: {x: -0.0065, y: -0.0003332701, z: 0.006734141}
+--- !u!114 &6339094513536316519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5935675847177248852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9e223bac745ef4091e684b78f63f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnAnimationController
+  duration: 1

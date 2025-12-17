@@ -65,6 +65,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03c40f22be0befc408a16601aac26283, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3396298803127202232}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03c40f22be0befc408a16601aac26283, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4385566196374994085}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 03c40f22be0befc408a16601aac26283, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3290222207849984264}
   m_SourcePrefab: {fileID: 100100000, guid: 03c40f22be0befc408a16601aac26283, type: 3}
 --- !u!1 &2101194638432755115 stripped
 GameObject:
@@ -118,3 +124,28 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.15
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4385566196374994085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101194638432755115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9e223bac745ef4091e684b78f63f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnAnimationController
+  duration: 1
+--- !u!114 &3290222207849984264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101194638432755115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d004471a42a1848a94219d3808de5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefaultObstacle

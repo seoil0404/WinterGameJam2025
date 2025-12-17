@@ -64,7 +64,13 @@ PrefabInstance:
       addedObject: {fileID: 2317378860864230157}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 282542d1ad5a6df418d4d2d73e7d24ad, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 299327483431968754}
+      addedObject: {fileID: 7365555404119589435}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 282542d1ad5a6df418d4d2d73e7d24ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6694427301510248150}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 282542d1ad5a6df418d4d2d73e7d24ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4872128078916516851}
   m_SourcePrefab: {fileID: 100100000, guid: 282542d1ad5a6df418d4d2d73e7d24ad, type: 3}
 --- !u!1 &7177750892055451197 stripped
 GameObject:
@@ -105,7 +111,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.15
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &299327483431968754
+--- !u!114 &7365555404119589435
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +120,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 7177750892055451197}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf649e0560b98024ab6d1538ffada68d, type: 3}
+  m_Script: {fileID: 11500000, guid: 0591ed171bba9c044b09fb452455527f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObstacleEntity
+  m_EditorClassIdentifier: Assembly-CSharp::MixBerryObstacleEntity
   m_maxHp: 1
+  offset: {x: 0, y: 0, z: 0}
+--- !u!114 &6694427301510248150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7177750892055451197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9e223bac745ef4091e684b78f63f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnAnimationController
+  duration: 1
+--- !u!114 &4872128078916516851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7177750892055451197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d004471a42a1848a94219d3808de5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefaultObstacle
