@@ -21,6 +21,8 @@ public class WorldManager : MonoBehaviour
     private void Start()
     {
         MapManager.Instance.AddMap(MapType.Tangerine);
+        MapManager.Instance.AddMap(MapType.Tangerine);
+        //MapManager.Instance.AddMap(MapType.Tangerine);
     }
 
     private void Update()
@@ -30,16 +32,19 @@ public class WorldManager : MonoBehaviour
             if(!generateObstacle)
             {
                 MapManager.Instance.AddMap(MapType.Tangerine);
+                MapManager.Instance.AddMap(MapType.Tangerine);
                 return;
             }
 
             if(UnityEngine.Random.Range(0, 12) == 0 && voidStack == 0)
             {
                 voidStack++;
+                MapManager.Instance.AddMap(MapType.Tangerine);
                 MapManager.Instance.AddMap(MapType.Void);
             }
             else
             {
+                MapManager.Instance.AddMap(MapType.Tangerine);
                 MapManager.Instance.AddMap(MapType.Tangerine);
                 ObstacleManager.Instance.GenerateObstacle();
                 voidStack = 0;

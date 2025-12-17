@@ -12,5 +12,7 @@ public class AvocadoObstacleEntity : ObstacleEntity
             EffectManager.Instance.EffectData.AbocadoExplosion, 
             transform.position + offset
             );
+
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.AudioData.AbocadoExplosion);
     }
 }

@@ -80,10 +80,10 @@ PrefabInstance:
       addedObject: {fileID: 2166352899578614369}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c43a84f71d54374ab27a2d8e760eb1a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3380832252564624210}
+      addedObject: {fileID: 3543899029896090825}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c43a84f71d54374ab27a2d8e760eb1a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3543899029896090825}
+      addedObject: {fileID: 7862523762553847100}
   m_SourcePrefab: {fileID: 100100000, guid: 8c43a84f71d54374ab27a2d8e760eb1a, type: 3}
 --- !u!4 &1229263596914834388 stripped
 Transform:
@@ -107,8 +107,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b02f2a3583097444eb63b8449fa662f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvocadoObstacle
---- !u!65 &3380832252564624210
-BoxCollider:
+--- !u!114 &3543899029896090825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892892928479404398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9e223bac745ef4091e684b78f63f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnAnimationController
+  duration: 1
+--- !u!64 &7862523762553847100
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -125,22 +138,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.02823463, y: 0.021165127, z: 0.0022989796}
-  m_Center: {x: -0.0034573749, y: -0.00000005344404, z: -0.00082743546}
---- !u!114 &3543899029896090825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892892928479404398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9e223bac745ef4091e684b78f63f7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpawnAnimationController
-  duration: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2124705421725058983, guid: 8c43a84f71d54374ab27a2d8e760eb1a, type: 3}
 --- !u!1001 &4845715195663907472
 PrefabInstance:
   m_ObjectHideFlags: 0

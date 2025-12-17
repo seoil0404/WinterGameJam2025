@@ -12,5 +12,7 @@ public class RabbitAppleObstacleEntity : ObstacleEntity
             EffectManager.Instance.EffectData.RabbitAppleExplosion,
             transform.position + offset
             );
+
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.AudioData.ApplePeel);
     }
 }

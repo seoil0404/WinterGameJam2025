@@ -12,5 +12,7 @@ public class WaterMelonObstacleEntity : ObstacleEntity
             EffectManager.Instance.EffectData.WaterMelonExplosion,
             transform.position + offset
             );
+
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.AudioData.WaterMelonExplosion);
     }
 }

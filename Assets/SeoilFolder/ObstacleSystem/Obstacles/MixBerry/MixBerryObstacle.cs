@@ -9,7 +9,7 @@ public class MixBerryObstacle : Obstacle
     [SerializeField] private float xInterval;
     [SerializeField] private float yInterval;
 
-    private const int RaspBerryCount = 3;
+    private const int RaspBerryCount = 1;
     private int currentRaspBerryCount = RaspBerryCount;
 
     private List<MixBerry> blueBerryList = new();
@@ -18,12 +18,12 @@ public class MixBerryObstacle : Obstacle
 
     public override void Initialize(float position)
     {
-        transform.position = new Vector3(0, 16.4f, position);
+        transform.position = new Vector3(0, 14.4f, position);
 
         List<(int x, int y)> pool = new List<(int, int)>();
 
-        for (int x = -3; x <= 3; x++)
-            for (int y = -2; y <= 2; y++)
+        for (int x = -1; x <= 1; x++)
+            for (int y = -1; y <= 1; y++)
                 pool.Add((x, y));
 
         for(int index = 0; index < RaspBerryCount; index++)

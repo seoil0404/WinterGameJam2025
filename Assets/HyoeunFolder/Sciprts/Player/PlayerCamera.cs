@@ -55,9 +55,7 @@ public class PlayerCamera : MonoBehaviour
 		if (Vector3.Distance(m_targetTransform.position, this.transform.position) > 0.1f)
 		{
 			m_lerpChangeTime += Time.deltaTime;
-			print(m_lerpChangeTime);
 			float time = m_lerpChangeTime / m_changeTime;
-			print(Vector3.Lerp(transform.position, m_targetTransform.position, time));
 			transform.position = Vector3.Lerp(transform.position, m_targetTransform.position, time);
 		}
 		else this.transform.position = m_targetTransform.position;

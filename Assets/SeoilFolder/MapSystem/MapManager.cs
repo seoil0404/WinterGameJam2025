@@ -27,10 +27,7 @@ public class MapManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-    }
 
-    private void Start()
-    {
         TangerineLength = tangerinePrefab.Length;
     }
 

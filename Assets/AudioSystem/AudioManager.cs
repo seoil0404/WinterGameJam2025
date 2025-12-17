@@ -64,6 +64,7 @@ public class AudioManager : MonoBehaviour
         audioSource.clip = clip;
         audioSource.volume = volume;
         audioSource.Play();
+        Debug.Log("Played");
     }
 
     private AudioSource GetAvailableSFXSource()

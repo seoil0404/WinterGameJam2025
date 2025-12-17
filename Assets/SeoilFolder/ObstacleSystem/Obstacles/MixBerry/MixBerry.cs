@@ -18,7 +18,7 @@ public class MixBerry : MonoBehaviour
 
     private void OnDestroy()
     {
-        if(type == MixBerryType.RaspBerry)
+        if (type == MixBerryType.RaspBerry)
         {
             mixBerryObstacle.OnRaspBerryDestroyed();
         }
