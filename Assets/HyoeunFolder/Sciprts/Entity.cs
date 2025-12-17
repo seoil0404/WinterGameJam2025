@@ -3,7 +3,7 @@ using UnityEngine;
 public abstract class Entity:MonoBehaviour
 {
     [SerializeField] private int m_maxHp;
-    private int m_hp;
+    [SerializeField] private int m_hp;
 	private void Awake()
 	{
 		m_hp = m_maxHp;

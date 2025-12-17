@@ -17,5 +17,5 @@ MonoBehaviour:
   appleRabitExplosion: {fileID: -6384911499622605628, guid: 775271e4737aedc449c957399551a577, type: 3}
   raspBerryExplosion: {fileID: -7001646662655669355, guid: e27c5fc9fc59eb64fb6dc047955477db, type: 3}
   dust: {fileID: -6431385124915035933, guid: 3b7f2c753d435d647a80f1f047a113e3, type: 3}
-  eggHit: {fileID: 8011913934614924873, guid: 0777bc22e9e6ace47a89e97740ea56e9, type: 3}
+  eggHit: {fileID: -4992985103500850602, guid: d5154ec4507152843b0af4bb32531e61, type: 3}
   playerHit: {fileID: -6359042165334917424, guid: e6eb729988ef2f349a24b0b4ae8fea47, type: 3}

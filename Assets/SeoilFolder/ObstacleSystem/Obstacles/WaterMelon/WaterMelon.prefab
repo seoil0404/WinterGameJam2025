@@ -215,6 +215,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a162bd4cec6adde458bf6762bec719bc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 977132151607117667}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a162bd4cec6adde458bf6762bec719bc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2419404599591750326}
   m_SourcePrefab: {fileID: 100100000, guid: a162bd4cec6adde458bf6762bec719bc, type: 3}
 --- !u!4 &2423663693973676275 stripped
 Transform:
@@ -260,7 +263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c68ae08f67a37e842bbc9e79bd0c28b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaterMelonObstacleEntity
-  m_maxHp: 4
+  m_maxHp: 2
+  m_hp: 0
   offset: {x: 0, y: 0, z: 0}
 --- !u!114 &977132151607117667
 MonoBehaviour:
@@ -274,3 +278,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54d004471a42a1848a94219d3808de5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DefaultObstacle
+--- !u!65 &2419404599591750326
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3092079470173993545}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.15014015, y: 0.61149514, z: 0.02}
+  m_Center: {x: -0.006769612, y: 0.06400057, z: 0}
