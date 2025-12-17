@@ -18,7 +18,7 @@ public class MixBerryObstacle : Obstacle
 
     public override void Initialize(float position)
     {
-        transform.position = new Vector3(0, 14.4f, position);
+        transform.position = new Vector3(0, 16.4f, position);
 
         List<(int x, int y)> pool = new List<(int, int)>();
 

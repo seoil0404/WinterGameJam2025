@@ -15,7 +15,7 @@ public class EffectManager : MonoBehaviour
 
     private void Update()
     {
-        GenerateEffect(effectData.Dust, transform.position);
+
     }
 
     public void GenerateEffect(Effect effect, Vector3 effectPosition)
