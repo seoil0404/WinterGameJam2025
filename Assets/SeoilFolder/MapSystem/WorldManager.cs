@@ -21,7 +21,7 @@ public class WorldManager : MonoBehaviour
     private void Start()
     {
         MapManager.Instance.AddMap(MapType.Tangerine);
-        //MapManager.Instance.AddMap(MapType.Tangerine);
+        MapManager.Instance.AddMap(MapType.Tangerine);
         //MapManager.Instance.AddMap(MapType.Tangerine);
     }
 

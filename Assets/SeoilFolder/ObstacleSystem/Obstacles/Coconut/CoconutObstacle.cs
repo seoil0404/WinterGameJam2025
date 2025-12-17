@@ -9,7 +9,7 @@ public class CoconutObstacle : Obstacle
     [SerializeField] private float fallOffset;
     [SerializeField] private float fallSpeed;
 
-    public override float SpawnWeight => 1;
+    public override float SpawnWeight => 0.33f;
 
     public override void Initialize(float position)
     {
