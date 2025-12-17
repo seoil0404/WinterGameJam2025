@@ -9,6 +9,15 @@ public class PlayerEntity : Entity
 		StartCoroutine(DeathTime());
 	}
 
+	private void OnCollisionEnter(Collision pCollision)
+	{
+		Obstacle collsion;
+		if (pCollision.transform.TryGetComponent<Obstacle>(out collsion))
+		{
+			DeathTime();
+			Destroy(this.gameObject);
+		}
+	}
 	private IEnumerator DeathTime()
 	{
 		yield return new WaitForSeconds(5);
