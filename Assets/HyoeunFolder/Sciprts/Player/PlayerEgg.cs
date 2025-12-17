@@ -13,7 +13,8 @@ public class PlayerEgg:MonoBehaviour
         Obstacle collsion;
 		if (pCollsion.transform.TryGetComponent<Obstacle>(out collsion))
         {
-            pCollsion.GetComponent<ObstacleEntity>().GiveDamage(m_damage);
+            ObstacleEntity entity;
+            if(pCollsion.TryGetComponent<ObstacleEntity>(out entity))entity.GiveDamage(m_damage);
             Destroy(this.gameObject);
         }
         else if(!pCollsion.transform.CompareTag("Player"))
