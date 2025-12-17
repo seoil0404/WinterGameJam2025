@@ -5,11 +5,6 @@ public class PlayerCamera : MonoBehaviour
 	public static PlayerCamera Instance { get; private set; }
 
     [SerializeField] private Transform m_targetTransform;
-
-	[Header("Offset")]
-	[SerializeField] private Vector3 positionOffset;
-	[SerializeField] private Vector3 rotationOffset;
-
 	private Transform m_player;
 	private float m_mouseSens;
 

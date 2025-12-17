@@ -52,7 +52,7 @@ public partial class PlayerController
 		Vector3 dir = (targetPos - eggPos).normalized * m_eggSpeed;
 
 		GameObject egg = Instantiate(m_eggPrefab, eggPos, Quaternion.identity);
-		egg.GetComponent<PlayerEgg>().Init(dir, m_eggSpeed, m_eggDamage);
+		egg.GetComponent<Egg>().Init(dir, m_eggSpeed, m_eggDamage);
 	}
 	private Vector3 GetCameraAimPointFromMuzzle(float pMaxDistance = 20)
 	{

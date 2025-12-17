@@ -1,9 +1,8 @@
 using UnityEngine;
 
-public class PlayerEgg:MonoBehaviour
+public class PlayerEgg : Egg
 {
-    private int m_damage;
-    public void Init(Vector3 pDir, float pSpeed, int pDamage)
+    public override void Init(Vector3 pDir, float pSpeed, int pDamage)
     {
         GetComponent<Rigidbody>().AddForce(pDir * pSpeed, ForceMode.Impulse);
         m_damage = pDamage;
