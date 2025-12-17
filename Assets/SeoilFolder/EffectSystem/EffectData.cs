@@ -10,6 +10,7 @@ public class EffectData : ScriptableObject
     [SerializeField] private Effect dust;
     [SerializeField] private Effect eggHit;
     [SerializeField] private Effect playerHit;
+    [SerializeField] private Effect coconutPosition;
 
     public Effect AbocadoExplosion => abocadoExplosion;
     public Effect WaterMelonExplosion => waterMelonExplosion;
@@ -18,4 +19,5 @@ public class EffectData : ScriptableObject
     public Effect Dust => dust;
     public Effect EggHit => eggHit;
     public Effect PlayerHit => playerHit;
+    public Effect CoconutPosition => coconutPosition;
 }

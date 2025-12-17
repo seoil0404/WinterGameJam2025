@@ -15,6 +15,11 @@ public class CoconutObstacle : Obstacle
     {
         SetRandomLinedPosition(position);
 
+        EffectManager.Instance.GenerateEffect(
+            EffectManager.Instance.EffectData.CoconutPosition,
+            new Vector3(transform.position.x, 11, transform.position.z)
+            ); ;
+
         SyncPosition();
     }
 

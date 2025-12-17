@@ -9,9 +9,7 @@ public class PauseUI : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
-        DontDestroyOnLoad(pauseUI);
-        DontDestroyOnLoad(this.gameObject);
-        DontDestroyOnLoad(SettingUI);
+
     }
 
     public void closeUi()
