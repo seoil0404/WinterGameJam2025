@@ -46,6 +46,9 @@ public partial class PlayerController
 	private void Shoot()
 	{
 		Debug.Log("shoot");
+
+		AudioManager.Instance.PlaySFX(AudioManager.Instance.AudioData.Shoot);
+
 		Vector3 eggPos = m_player.transform.position + new Vector3(0.2f, 0.5f, 0);
 		Vector3 targetPos = GetCameraAimPointFromMuzzle(20f);
 

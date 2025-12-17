@@ -13,4 +13,9 @@ public class GameManager : MonoBehaviour
     {
         AudioManager.Instance.SetBGM(AudioManager.Instance.AudioData.MainBGM);
     }
+
+    public void GameOver()
+    {
+
+    }
 }

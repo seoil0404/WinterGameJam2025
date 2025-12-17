@@ -20,3 +20,4 @@ MonoBehaviour:
   eggHit: {fileID: -4992985103500850602, guid: d5154ec4507152843b0af4bb32531e61, type: 3}
   playerHit: {fileID: -6359042165334917424, guid: e6eb729988ef2f349a24b0b4ae8fea47, type: 3}
   coconutPosition: {fileID: 2764207887751850646, guid: 50225fb6d9b49004d9b74ae7c8133c9e, type: 3}
+  jump: {fileID: 1018726318747089468, guid: ebb8aafa1f5669b4dbae1bd94495215a, type: 3}
