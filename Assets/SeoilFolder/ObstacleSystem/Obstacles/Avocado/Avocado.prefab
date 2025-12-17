@@ -215,6 +215,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 58fdc900d3f63e548a15418b7ddf2e88, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9032784968553597028}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 58fdc900d3f63e548a15418b7ddf2e88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 69389121188379969}
   m_SourcePrefab: {fileID: 100100000, guid: 58fdc900d3f63e548a15418b7ddf2e88, type: 3}
 --- !u!4 &4951084601394011515 stripped
 Transform:
@@ -261,3 +264,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AvocadoObstacleEntity
   m_maxHp: 4
   offset: {x: 0, y: 0, z: 0}
+--- !u!114 &69389121188379969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5764072722771429313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d004471a42a1848a94219d3808de5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefaultObstacle
