@@ -4,6 +4,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance {  get; private set; }
 
+    [SerializeField] private GameOverView gameOverViewPrefab;
+
     private void Awake()
     {
         Instance = this;
@@ -16,6 +18,6 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-
+        Instantiate(gameOverViewPrefab);
     }
 }

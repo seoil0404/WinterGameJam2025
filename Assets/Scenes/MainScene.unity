@@ -459,6 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e58cab1e8689e44493a2eaf38cb1c61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  gameOverViewPrefab: {fileID: -8336255801282904883, guid: c2b8d52c629b8ce41b421dcfa2fbe18d, type: 3}
 --- !u!1 &163857642
 GameObject:
   m_ObjectHideFlags: 0
