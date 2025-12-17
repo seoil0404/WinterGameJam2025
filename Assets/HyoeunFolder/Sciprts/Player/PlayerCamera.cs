@@ -17,6 +17,12 @@ public class PlayerCamera : MonoBehaviour
 	private float m_mouseX;
 	private float m_mouseY;
 
+	private bool m_isPlayerAlive;
+
+	public void PlayerDeath()
+	{
+		m_isPlayerAlive = true;
+	}
 	private void Awake()
 	{
 		Instance = this;
@@ -24,6 +30,7 @@ public class PlayerCamera : MonoBehaviour
 		m_mouseY = 0;
 		m_canRotate = false;
 		m_lerpChangeTime = 0;
+		m_isPlayerAlive = false;
 	}
 	public void Init(float pSens, float pChangeTime, Vector3 pStartPos, Transform pPlayer)
 	{
@@ -44,6 +51,7 @@ public class PlayerCamera : MonoBehaviour
     }
 	private void Update()
 	{
+		if (m_isPlayerAlive) return;
 		if (Vector3.Distance(m_targetTransform.position, this.transform.position) > 0.1f)
 		{
 			m_lerpChangeTime += Time.deltaTime;
