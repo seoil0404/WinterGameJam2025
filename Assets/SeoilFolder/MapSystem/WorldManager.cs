@@ -20,7 +20,7 @@ public class WorldManager : MonoBehaviour
 
     private void Start()
     {
-        MapManager.Instance.AddMap(MapType.Tangerine);
+        MapManager.Instance.AddMap(MapType.Tangerine).GetComponent<AppearAnimationController>().StopAnimation();
         DecorateManager.Instance.GenerateDecorate();
         MapManager.Instance.AddMap(MapType.Tangerine);
         DecorateManager.Instance.GenerateDecorate();
@@ -58,7 +58,7 @@ public class WorldManager : MonoBehaviour
 
     public void GenerateTutorialMap()
     {
-        MapManager.Instance.AddMap(MapType.Tangerine);
+        MapManager.Instance.AddMap(MapType.Tangerine).GetComponent<AppearAnimationController>().StopAnimation();
         ObstacleManager.Instance.GenerateObstacle(ObstacleManager.Instance.ObstacleData.BananaObstacle);
 
         MapManager.Instance.AddMap(MapType.Tangerine);
