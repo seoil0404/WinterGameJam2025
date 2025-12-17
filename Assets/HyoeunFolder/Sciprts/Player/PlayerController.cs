@@ -7,9 +7,13 @@ public partial class PlayerController : MonoBehaviour
 	public static PlayerController Instance { get; private set; }
 
 	private GameObject m_player;
+
+	private PlayerCamera m_playerCamera;
+
 	private Rigidbody m_rigidbody;
 	private Animator m_animator;
 	private CapsuleCollider m_collider;
+
 	private void Awake()
 	{
 		Instance = this;
@@ -18,11 +22,20 @@ public partial class PlayerController : MonoBehaviour
 		m_collider = GetComponent<CapsuleCollider>();
 		m_player = this.transform.gameObject;
 
-
 		MovementAwake();
+		ShootingAwake();
+	}
+
+	private void Start()
+	{
+		m_playerCamera = PlayerCamera.Instance;
+		CameraStart();
+
 	}
 	private void Update()
 	{
 		MovementUpdate();
+		ShootingUpdate();
+		CameraUpdate();
 	}
 }

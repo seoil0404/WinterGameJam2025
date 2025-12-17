@@ -17,6 +17,7 @@ public class PauseUI : MonoBehaviour
     public void closeUi()
     {
         pauseUI.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
 
