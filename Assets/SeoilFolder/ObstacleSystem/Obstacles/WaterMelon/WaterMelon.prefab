@@ -263,7 +263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c68ae08f67a37e842bbc9e79bd0c28b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaterMelonObstacleEntity
-  m_maxHp: 1
+  m_maxHp: 2
+  m_hp: 0
   offset: {x: 0, y: 0, z: 0}
 --- !u!114 &977132151607117667
 MonoBehaviour:
@@ -296,5 +297,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.15014015, y: 0.61149514, z: 0.07799035}
-  m_Center: {x: -0.006769612, y: 0.06400057, z: -0.08}
+  m_Size: {x: 0.15014015, y: 0.61149514, z: 0.02}
+  m_Center: {x: -0.006769612, y: 0.06400057, z: 0}

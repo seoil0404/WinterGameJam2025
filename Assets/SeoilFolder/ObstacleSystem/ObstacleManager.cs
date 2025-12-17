@@ -11,6 +11,7 @@ public class ObstacleManager : MonoBehaviour
 
     public Vector3 ObstacleOffset => obstacleOffset;
     public float HorizontalInterval => horizontalInterval;
+    public ObstacleData ObstacleData => obstacleData;
 
     private int bigObstacleStack = 0;
     
@@ -49,5 +50,10 @@ public class ObstacleManager : MonoBehaviour
             Instantiate(selected).Initialize(MapManager.RecentMapPosition);
         }
         
+    }
+
+    public void GenerateObstacle(Obstacle obstacle)
+    {
+        Instantiate(obstacle).Initialize(MapManager.RecentMapPosition);
     }
 }
