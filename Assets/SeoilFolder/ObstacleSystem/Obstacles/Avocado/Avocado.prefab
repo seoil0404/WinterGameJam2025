@@ -81,6 +81,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c43a84f71d54374ab27a2d8e760eb1a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3380832252564624210}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c43a84f71d54374ab27a2d8e760eb1a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3543899029896090825}
   m_SourcePrefab: {fileID: 100100000, guid: 8c43a84f71d54374ab27a2d8e760eb1a, type: 3}
 --- !u!4 &1229263596914834388 stripped
 Transform:
@@ -125,6 +128,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02823463, y: 0.021165127, z: 0.0022989796}
   m_Center: {x: -0.0034573749, y: -0.00000005344404, z: -0.00082743546}
+--- !u!114 &3543899029896090825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892892928479404398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9e223bac745ef4091e684b78f63f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnAnimationController
+  duration: 1
 --- !u!1001 &4845715195663907472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -198,7 +214,7 @@ PrefabInstance:
       addedObject: {fileID: 2512275753230533158}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 58fdc900d3f63e548a15418b7ddf2e88, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3476743339718682815}
+      addedObject: {fileID: 9032784968553597028}
   m_SourcePrefab: {fileID: 100100000, guid: 58fdc900d3f63e548a15418b7ddf2e88, type: 3}
 --- !u!4 &4951084601394011515 stripped
 Transform:
@@ -231,7 +247,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.006510299
   m_Center: {x: 0.0020587258, y: 4.9083837e-10, z: -0.002}
---- !u!114 &3476743339718682815
+--- !u!114 &9032784968553597028
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,7 +256,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5764072722771429313}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf649e0560b98024ab6d1538ffada68d, type: 3}
+  m_Script: {fileID: 11500000, guid: c70f41b71ebf8674e99589cc84fa4cd2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObstacleEntity
+  m_EditorClassIdentifier: Assembly-CSharp::AvocadoObstacleEntity
   m_maxHp: 4
+  offset: {x: 0, y: 0, z: 0}

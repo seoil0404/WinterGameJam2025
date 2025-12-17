@@ -10,7 +10,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private float scorePerSecond = 10f;
 
     private float currentScore = 0f;
-    private bool isPlaying = false;
+    private bool isPlaying = true;
 
     void Start()
     {
