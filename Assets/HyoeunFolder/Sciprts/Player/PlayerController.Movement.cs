@@ -75,7 +75,6 @@ public partial class PlayerController
 			m_leftJumpDelay = m_jumpLimitDelay;
 			m_isGrounded = false;
 			m_jumpCount++;
-			print(m_jumpCount);
 
 			m_animator.SetBool("Sit", false);
 			m_animator.SetBool("Jump", true);

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 348246370926371631}
   - component: {fileID: 7581837017347450486}
   - component: {fileID: -74447480678734926}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EggRabTarget
-  m_TagString: Untagged
+  m_TagString: HitableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 87b7145a35969874987389812d7013e8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

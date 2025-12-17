@@ -22,13 +22,16 @@ public partial class PlayerController
 		m_leftEggDelay -= Time.deltaTime;
 		if(Input.GetMouseButtonDown(1))
 		{
-			Debug.Log("aming");
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
+			
 			m_isAiming = true;
 			AimingCamera();
 		}
 		else if(Input.GetMouseButtonUp(1))
 		{
-			Debug.Log("anaming");
+			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
 			m_isAiming = false;
 			DefaultCamera();
 		}
@@ -45,8 +48,7 @@ public partial class PlayerController
 	}
 	private void Shoot()
 	{
-		Debug.Log("shoot");
-		Vector3 eggPos = m_player.transform.position + new Vector3(0.2f, 0.5f, 0);
+		Vector3 eggPos = m_player.transform.position + new Vector3(0f, 0.5f, 0);
 		Vector3 targetPos = GetCameraAimPointFromMuzzle(20f);
 
 		Vector3 dir = (targetPos - eggPos).normalized * m_eggSpeed;
@@ -54,7 +56,7 @@ public partial class PlayerController
 		GameObject egg = Instantiate(m_eggPrefab, eggPos, Quaternion.identity);
 		egg.GetComponent<Egg>().Init(dir, m_eggSpeed, m_eggDamage);
 	}
-	private Vector3 GetCameraAimPointFromMuzzle(float pMaxDistance = 20)
+	private Vector3 GetCameraAimPointFromMuzzle(float pMaxDistance = 10)
 	{
 		Vector3 point = Vector3.zero;
 
@@ -63,6 +65,7 @@ public partial class PlayerController
 		Vector3 targetPos;
 		if (Physics.Raycast(targetRay, out target, pMaxDistance, LayerMask.GetMask("Map", "HitableObject")))
 		{
+			print("targetPos");
 			targetPos = target.point;
 		}
 		else

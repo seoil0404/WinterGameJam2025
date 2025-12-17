@@ -2,11 +2,16 @@ using UnityEngine;
 
 public class PlayerEgg : Egg
 {
-    public override void Init(Vector3 pDir, float pSpeed, int pDamage)
-    {
-        GetComponent<Rigidbody>().AddForce(pDir * pSpeed, ForceMode.Impulse);
-        m_damage = pDamage;
-    }
+	public override void Init(Vector3 pDir, float pSpeed, int pDamage)
+	{
+		m_speed = pSpeed;
+		m_direction = pDir;
+		m_damage = pDamage;
+	}
+	private void Update()
+	{
+		this.transform.position += m_direction * m_speed * Time.deltaTime;
+	}
 	private void OnTriggerEnter(Collider pCollsion)
 	{
         Obstacle collsion;
