@@ -14,4 +14,14 @@ public class TestScript : MonoBehaviour
 
         SceneController.Instance.LoadScene(SceneType.TutorialScene);
     }
+
+
+    private IEnumerator Coroutine()
+    {
+        
+
+        yield return new WaitForSeconds(13f);
+
+        SceneController.Instance.LoadScene(SceneType.TutorialScene);
+    }
 }
