@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
@@ -52,6 +53,13 @@ public partial class PlayerController
 	{
 		float h = Input.GetAxisRaw("Horizontal");
 		m_rigidbody.linearVelocity = new Vector3(h * m_hMoveSpeed, m_rigidbody.linearVelocity.y, m_moveSpeed);
+
+		if (m_isAiming)
+		{
+			Vector3 rotation = new Vector3(m_body.rotation.eulerAngles.x, m_playerCamera.transform.rotation.eulerAngles.y, 0);
+			m_player.transform.rotation = Quaternion.Euler(rotation);
+			return;
+		}
 
 		if (h > 0) m_body.rotation = Quaternion.Euler(new Vector3(0, m_rotateScale, 0));
 		else if (h < 0) m_body.rotation = Quaternion.Euler(new Vector3(0, -m_rotateScale, 0));

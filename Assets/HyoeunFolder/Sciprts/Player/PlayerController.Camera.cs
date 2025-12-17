@@ -21,7 +21,7 @@ public partial class PlayerController
 	private void CameraStart()
     {
         DefaultCamera();
-        m_playerCamera.Init(m_mouseSens, m_changeTime, m_defaultCam.position);
+        m_playerCamera.Init(m_mouseSens, m_changeTime, m_defaultCam.position, this.transform);
     }
 
     private void CameraUpdate()

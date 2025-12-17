@@ -5,7 +5,7 @@ public class PlayerCamera : MonoBehaviour
 	public static PlayerCamera Instance { get; private set; }
 
     [SerializeField] private Transform m_targetTransform;
-
+	private Transform m_player;
 	private float m_mouseSens;
 
 	private float m_changeTime;
@@ -22,9 +22,11 @@ public class PlayerCamera : MonoBehaviour
 		Instance = this;
 		m_mouseX = 0;
 		m_mouseY = 0;
+		m_canRotate = false;
 	}
-	public void Init(float pSens, float pChangeTime, Vector3 pStartPos)
+	public void Init(float pSens, float pChangeTime, Vector3 pStartPos, Transform pPlayer)
 	{
+		m_player = pPlayer;
 		m_mouseSens = pSens;
 		m_changeTime = pChangeTime;
 		this.transform.position = pStartPos;
@@ -55,7 +57,12 @@ public class PlayerCamera : MonoBehaviour
 	}
 	private void AimingCam()
 	{
-		m_mouseX += Input.GetAxisRaw("Mouse X");
-		m_mouseY -= Input.GetAxisRaw("Mouse Y");
+		m_mouseX += Input.GetAxisRaw("Mouse X") * Time.deltaTime * m_mouseSens;
+		m_mouseY -= Input.GetAxisRaw("Mouse Y") * Time.deltaTime * m_mouseSens;
+
+		m_mouseY = Mathf.Clamp(m_mouseY, -50f, 25f);
+		m_mouseX = Mathf.Clamp(m_mouseX, -40f, 40f);
+
+		transform.transform.rotation = Quaternion.Euler(m_mouseY, m_mouseX, 0);
 	}
 }

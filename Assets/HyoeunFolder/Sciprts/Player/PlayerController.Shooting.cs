@@ -10,11 +10,11 @@ public partial class PlayerController
 	[SerializeField] private float m_eggDelay;
 	[SerializeField] private int m_eggDamage;
 	private float m_leftEggDelay;
-	private bool m_aiming;
+	private bool m_isAiming;
 	private void ShootingAwake()
 	{
 		m_leftEggDelay = 0;
-		m_aiming = false;
+		m_isAiming = false;
 	}
 
 	private void ShootingUpdate()
@@ -23,17 +23,17 @@ public partial class PlayerController
 		if(Input.GetMouseButtonDown(1))
 		{
 			Debug.Log("aming");
-			m_aiming = true;
+			m_isAiming = true;
 			AimingCamera();
 		}
 		else if(Input.GetMouseButtonUp(1))
 		{
 			Debug.Log("anaming");
-			m_aiming = false;
+			m_isAiming = false;
 			DefaultCamera();
 		}
 
-		if(m_leftEggDelay <= 0 && m_aiming)
+		if(m_leftEggDelay <= 0 && m_isAiming)
 		{
 			if(Input.GetMouseButton(0))
 			{
