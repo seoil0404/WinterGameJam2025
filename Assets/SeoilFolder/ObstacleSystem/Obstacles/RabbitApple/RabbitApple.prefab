@@ -216,6 +216,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 161b4fb87649a684ba54469ac8b4f247, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8188920465326864230}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 161b4fb87649a684ba54469ac8b4f247, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 532696008889382697}
   m_SourcePrefab: {fileID: 100100000, guid: 161b4fb87649a684ba54469ac8b4f247, type: 3}
 --- !u!1 &7063316039840491006 stripped
 GameObject:
@@ -258,6 +261,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RabbitAppleObstacleEntity
   m_maxHp: 4
   offset: {x: 0, y: 0, z: 0}
+--- !u!114 &532696008889382697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7063316039840491006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d004471a42a1848a94219d3808de5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefaultObstacle
 --- !u!4 &7588037810443173700 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 161b4fb87649a684ba54469ac8b4f247, type: 3}
