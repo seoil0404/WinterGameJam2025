@@ -17,12 +17,20 @@ public class PlayerCamera : MonoBehaviour
 	private float m_mouseX;
 	private float m_mouseY;
 
+	private bool m_isPlayerAlive;
+
+	public void PlayerDeath()
+	{
+		m_isPlayerAlive = true;
+	}
 	private void Awake()
 	{
 		Instance = this;
 		m_mouseX = 0;
 		m_mouseY = 0;
 		m_canRotate = false;
+		m_lerpChangeTime = 0;
+		m_isPlayerAlive = false;
 	}
 	public void Init(float pSens, float pChangeTime, Vector3 pStartPos, Transform pPlayer)
 	{
@@ -33,7 +41,9 @@ public class PlayerCamera : MonoBehaviour
 	}
 	public void SetTarget(Transform pTarget, bool pRotation)
     {
-        m_targetTransform = pTarget;
+		m_lerpChangeTime = 0;
+
+		m_targetTransform = pTarget;
 		m_canRotate = pRotation;
 
 		this.transform.rotation = m_targetTransform.transform.rotation;
@@ -41,11 +51,13 @@ public class PlayerCamera : MonoBehaviour
     }
 	private void Update()
 	{
-		if (Vector3.Distance(m_targetTransform.position, this.transform.position) < 0.1f) m_isLerpChanging = false;
-		if (m_isLerpChanging)
+		if (m_isPlayerAlive) return;
+		if (Vector3.Distance(m_targetTransform.position, this.transform.position) > 0.1f)
 		{
 			m_lerpChangeTime += Time.deltaTime;
+			print(m_lerpChangeTime);
 			float time = m_lerpChangeTime / m_changeTime;
+			print(Vector3.Lerp(transform.position, m_targetTransform.position, time));
 			transform.position = Vector3.Lerp(transform.position, m_targetTransform.position, time);
 		}
 		else this.transform.position = m_targetTransform.position;
@@ -60,7 +72,7 @@ public class PlayerCamera : MonoBehaviour
 		m_mouseX += Input.GetAxisRaw("Mouse X") * Time.deltaTime * m_mouseSens;
 		m_mouseY -= Input.GetAxisRaw("Mouse Y") * Time.deltaTime * m_mouseSens;
 
-		m_mouseY = Mathf.Clamp(m_mouseY, -50f, 25f);
+		m_mouseY = Mathf.Clamp(m_mouseY, -25f, 25f);
 		m_mouseX = Mathf.Clamp(m_mouseX, -40f, 40f);
 
 		transform.transform.rotation = Quaternion.Euler(m_mouseY, m_mouseX, 0);

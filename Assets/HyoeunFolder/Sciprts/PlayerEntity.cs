@@ -6,12 +6,15 @@ public class PlayerEntity : Entity
 	protected override void Kill()
 	{
 		GetComponent<Animator>().SetBool("Death", true);
-		StartCoroutine(DeathTime());
+		PlayerController.Instance.GameOver();
 	}
 
-	private IEnumerator DeathTime()
+	private void OnCollisionEnter(Collision pCollision)
 	{
-		yield return new WaitForSeconds(5);
-		base.Kill();
+		Obstacle collsion;
+		if (pCollision.transform.TryGetComponent<Obstacle>(out collsion))
+		{
+			Kill();
+		}
 	}
 }

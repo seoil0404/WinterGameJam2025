@@ -56,8 +56,7 @@ public partial class PlayerController
 
 		if (m_isAiming)
 		{
-			Vector3 rotation = new Vector3(m_body.rotation.eulerAngles.x, m_playerCamera.transform.rotation.eulerAngles.y, 0);
-			m_player.transform.rotation = Quaternion.Euler(rotation);
+			
 			return;
 		}
 
@@ -134,7 +133,6 @@ public partial class PlayerController
 
 		m_isSit = false;
 	}
-
 	private void SpeedUp()
 	{
 		if (m_moveSpeed >= m_maxMoveSpeed) return;
