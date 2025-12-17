@@ -14,7 +14,7 @@ public class CamObj : MonoBehaviour
     }
     private void Update()
     {
-        transform.position = player.gameObject.transform.position;
+        transform.position = player.gameObject.transform.position + new Vector3 (0, 1.05f, 0);
         Rotate();
     }
     private void Rotate()

@@ -1,10 +1,11 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
     [Header("UI")]
-    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private Text scoreText;
 
     [Header("Score Settings")]
     [SerializeField] private float scorePerSecond = 10f;
@@ -45,7 +46,7 @@ public class ScoreManager : MonoBehaviour
 
     private void UpdateScoreUI()
     {
-        scoreText.text = Mathf.FloorToInt(currentScore).ToString("0000");
+        scoreText.text = Mathf.FloorToInt(currentScore).ToString();
     }
 }
 

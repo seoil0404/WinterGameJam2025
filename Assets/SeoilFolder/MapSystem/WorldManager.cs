@@ -21,7 +21,9 @@ public class WorldManager : MonoBehaviour
     private void Start()
     {
         MapManager.Instance.AddMap(MapType.Tangerine);
-        //MapManager.Instance.AddMap(MapType.Tangerine);
+        DecorateManager.Instance.GenerateDecorate();
+        MapManager.Instance.AddMap(MapType.Tangerine);
+        DecorateManager.Instance.GenerateDecorate();
         //MapManager.Instance.AddMap(MapType.Tangerine);
     }
 
@@ -49,6 +51,8 @@ public class WorldManager : MonoBehaviour
                 ObstacleManager.Instance.GenerateObstacle();
                 voidStack = 0;
             }
+
+            DecorateManager.Instance.GenerateDecorate();
         }
     }
 
