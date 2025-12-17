@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MixBerryObstacleEntity : Entity
+public class MixBerryObstacleEntity : ObstacleEntity
 {
     [SerializeField] private Vector3 offset;
 

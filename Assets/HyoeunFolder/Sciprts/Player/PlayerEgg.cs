@@ -11,16 +11,20 @@ public class PlayerEgg:MonoBehaviour
 	private void OnTriggerEnter(Collider pCollsion)
 	{
         Obstacle collsion;
-		if (pCollsion.transform.TryGetComponent<Obstacle>(out collsion))
+        if (pCollsion.transform.TryGetComponent<Obstacle>(out collsion))
         {
             ObstacleEntity entity;
-            if(pCollsion.TryGetComponent<ObstacleEntity>(out entity))entity.GiveDamage(m_damage);
+            if (pCollsion.TryGetComponent<ObstacleEntity>(out entity)) entity.GiveDamage(m_damage);
             Destroy(this.gameObject);
         }
-        else if(!pCollsion.transform.CompareTag("Player"))
+        else if (!pCollsion.transform.CompareTag("Player"))
         {
             Destroy(this.gameObject);
-		}
-	}
+        }
+        else return;
+
+        EffectManager.Instance.GenerateEffect(EffectManager.Instance.EffectData.EggHit, transform.position);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.AudioData.EggDestroy);
+    }
 
 }

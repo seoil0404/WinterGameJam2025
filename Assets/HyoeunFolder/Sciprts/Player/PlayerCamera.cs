@@ -5,6 +5,11 @@ public class PlayerCamera : MonoBehaviour
 	public static PlayerCamera Instance { get; private set; }
 
     [SerializeField] private Transform m_targetTransform;
+
+	[Header("Offset")]
+	[SerializeField] private Vector3 positionOffset;
+	[SerializeField] private Vector3 rotationOffset;
+
 	private Transform m_player;
 	private float m_mouseSens;
 
@@ -46,7 +51,6 @@ public class PlayerCamera : MonoBehaviour
 		m_targetTransform = pTarget;
 		m_canRotate = pRotation;
 
-		this.transform.rotation = m_targetTransform.transform.rotation;
 		m_isLerpChanging = true;
     }
 	private void Update()
@@ -55,10 +59,9 @@ public class PlayerCamera : MonoBehaviour
 		if (Vector3.Distance(m_targetTransform.position, this.transform.position) > 0.1f)
 		{
 			m_lerpChangeTime += Time.deltaTime;
-			print(m_lerpChangeTime);
 			float time = m_lerpChangeTime / m_changeTime;
-			print(Vector3.Lerp(transform.position, m_targetTransform.position, time));
 			transform.position = Vector3.Lerp(transform.position, m_targetTransform.position, time);
+			transform.rotation = Quaternion.Lerp(transform.rotation, m_targetTransform.rotation, time);
 		}
 		else this.transform.position = m_targetTransform.position;
 

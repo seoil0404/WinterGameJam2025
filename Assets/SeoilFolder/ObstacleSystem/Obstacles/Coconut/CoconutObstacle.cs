@@ -22,6 +22,8 @@ public class CoconutObstacle : Obstacle
     {
         Destroy(coconutVFX.gameObject);
         StartCoroutine(DestroyDust(Instantiate(coconutDust.gameObject)));
+
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.AudioData.CoconutExplosion);
     }
 
     private IEnumerator DestroyDust(GameObject coconutDust)
