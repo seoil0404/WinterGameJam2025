@@ -10,9 +10,10 @@ public class PlayerEgg:MonoBehaviour
     }
 	private void OnTriggerEnter(Collider pCollsion)
 	{
-		if(pCollsion.transform.CompareTag("HitableObject"))
+        Obstacle collsion;
+		if (pCollsion.transform.TryGetComponent<Obstacle>(out collsion))
         {
-            pCollsion.GetComponent<Entity>().GiveDamage(m_damage);
+            pCollsion.GetComponent<ObstacleEntity>().GiveDamage(m_damage);
             Destroy(this.gameObject);
         }
         else if(!pCollsion.transform.CompareTag("Player"))

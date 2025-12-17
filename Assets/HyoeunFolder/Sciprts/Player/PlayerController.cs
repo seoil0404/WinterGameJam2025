@@ -14,8 +14,17 @@ public partial class PlayerController : MonoBehaviour
 	private Animator m_animator;
 	private CapsuleCollider m_collider;
 
+	private bool m_isPlayingGame;
+
+	public void GameOver()
+	{
+		m_playerCamera.PlayerDeath();
+		m_isPlayingGame = false;
+
+	}
 	private void Awake()
 	{
+		m_isPlayingGame = true;
 		Instance = this;
 		m_rigidbody = GetComponent<Rigidbody>();
 		m_animator = GetComponent<Animator>();
@@ -34,6 +43,7 @@ public partial class PlayerController : MonoBehaviour
 	}
 	private void Update()
 	{
+		if (!m_isPlayingGame) return;
 		MovementUpdate();
 		ShootingUpdate();
 		CameraUpdate();
