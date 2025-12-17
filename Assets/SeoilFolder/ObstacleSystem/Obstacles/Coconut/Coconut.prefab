@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 33234404052140460}
   - component: {fileID: 23048070169948716}
   - component: {fileID: -1809150576591168500}
+  - component: {fileID: 2393208494682618372}
+  - component: {fileID: 4308336141263351933}
   m_Layer: 0
   m_Name: Coconut
   m_TagString: Untagged
@@ -109,6 +111,42 @@ MonoBehaviour:
   groundOffset: 10.5
   fallOffset: 1
   fallSpeed: 2
+--- !u!136 &2393208494682618372
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970677951651748}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.7021281
+  m_Height: 1.51777
+  m_Direction: 1
+  m_Center: {x: 0.0021163228, y: 0.75585747, z: -0.00040927535}
+--- !u!114 &4308336141263351933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970677951651748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9e223bac745ef4091e684b78f63f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnAnimationController
+  duration: 1
 --- !u!1001 &7120456642230689399
 PrefabInstance:
   m_ObjectHideFlags: 0

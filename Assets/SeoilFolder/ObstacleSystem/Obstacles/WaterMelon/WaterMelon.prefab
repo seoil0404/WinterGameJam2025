@@ -74,6 +74,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: acc3f23f591dc234dba3cf91f7da1577, type: 3}
       insertIndex: -1
       addedObject: {fileID: -6605906802532724010}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: acc3f23f591dc234dba3cf91f7da1577, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7543199988189532516}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: acc3f23f591dc234dba3cf91f7da1577, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7798726087823135209}
   m_SourcePrefab: {fileID: 100100000, guid: acc3f23f591dc234dba3cf91f7da1577, type: 3}
 --- !u!4 &1512593820500602936 stripped
 Transform:
@@ -97,6 +103,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ed194dc3fa8d94a851037090dc04c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaterMelonObstacle
+--- !u!64 &7543199988189532516
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2285014669646359170}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: acc3f23f591dc234dba3cf91f7da1577, type: 3}
+--- !u!114 &7798726087823135209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2285014669646359170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9e223bac745ef4091e684b78f63f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnAnimationController
+  duration: 1
 --- !u!1001 &2749496177059858200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -164,10 +205,57 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a162bd4cec6adde458bf6762bec719bc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8153078451807981235}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a162bd4cec6adde458bf6762bec719bc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3361493528947217833}
   m_SourcePrefab: {fileID: 100100000, guid: a162bd4cec6adde458bf6762bec719bc, type: 3}
 --- !u!4 &2423663693973676275 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a162bd4cec6adde458bf6762bec719bc, type: 3}
   m_PrefabInstance: {fileID: 2749496177059858200}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3092079470173993545 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a162bd4cec6adde458bf6762bec719bc, type: 3}
+  m_PrefabInstance: {fileID: 2749496177059858200}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &8153078451807981235
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3092079470173993545}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5854088795082504319, guid: a162bd4cec6adde458bf6762bec719bc, type: 3}
+--- !u!114 &3361493528947217833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3092079470173993545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c68ae08f67a37e842bbc9e79bd0c28b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterMelonObstacleEntity
+  m_maxHp: 4
+  offset: {x: 0, y: 0, z: 0}
