@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39bbd20f74e63cb40bd25a8981bf47d6, type: 3}
+  m_Name: TutorialScript5
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialScript
+  Scripts:
+  - "\uD5C9, \uC55E\uC5D0 \uAE38\uC774 \uB04A\uACBC\uC5B4\uC694!"
+  - "SpaceBar\uB97C \uB20C\uB7EC \uC810\uD504\uD574 \uB6F0\uC5B4\uB118\uC5B4\uBCF4\uC138\uC694!"
+  Quest: "SpaceBar\uB85C \uC810\uD504\uD574 \uB118\uC5B4\uAC00\uAE30"
+  SpwanPoint: {x: 0, y: 11, z: 0}
