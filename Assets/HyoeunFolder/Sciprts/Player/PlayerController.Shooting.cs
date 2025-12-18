@@ -11,8 +11,11 @@ public partial class PlayerController
 	[SerializeField] private int m_eggDamage;
 	private float m_leftEggDelay;
 	private bool m_isAiming;
+	private ObjectPool m_eggObjectPool;
 	private void ShootingAwake()
 	{
+		//m_eggObjectPool = new ObjectPool(m_eggPrefab);
+		//m_eggObjectPool.Init(20);
 		m_leftEggDelay = 0;
 		m_isAiming = false;
 	}
@@ -57,8 +60,11 @@ public partial class PlayerController
 
 		Vector3 dir = (targetPos - eggPos).normalized * m_eggSpeed;
 
-		GameObject egg = Instantiate(m_eggPrefab, eggPos, Quaternion.identity);
-		egg.GetComponent<Egg>().Init(dir, m_eggSpeed, m_eggDamage);
+		GameObject egg = Instantiate(m_eggPrefab);
+		egg.transform.position = eggPos;
+		egg.GetComponent<Egg>().Init(dir, m_eggSpeed, m_eggDamage); 
+		egg.GetComponent<AutoReturn>().Init(2);
+
 	}
 	private Vector3 GetCameraAimPointFromMuzzle(float pMaxDistance = 20)
 	{
