@@ -11,6 +11,9 @@ public class TitleManager : MonoBehaviour
 
 	private void Start()
 	{
-		AudioManager.Instance.SetBGM(AudioManager.Instance.AudioData.TitleBGM);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        AudioManager.Instance.SetBGM(AudioManager.Instance.AudioData.TitleBGM);
 	}
 }
