@@ -47,7 +47,7 @@ public class SceneController : MonoBehaviour
         StartCoroutine(LoadScene(sceneName.ToString(), duration));
     }
 
-    public void LoadSceneWithoutFade()
+    public void LoadSceneWithoutFade(SceneType sceneName)
     {
         SceneManager.LoadScene(sceneName.ToString());
     }
