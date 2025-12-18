@@ -1109,8 +1109,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.89}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -311.6, y: 100.6}
-  m_SizeDelta: {x: 39.9977, y: 21.5565}
+  m_AnchoredPosition: {x: -202, y: 100.4}
+  m_SizeDelta: {x: 163.5645, y: 68.7034}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &639401943
 MonoBehaviour:
@@ -1181,7 +1181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1582,17 +1582,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16d03732723062479a94df72678faec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialData
---- !u!114 &969379500 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3002178257268159042, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
-  m_PrefabInstance: {fileID: 1793700557074781453}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f468e381d3fe97c408778e4bfb97c966, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SettingPopup
 --- !u!1 &1013615419
 GameObject:
   m_ObjectHideFlags: 0
@@ -2314,8 +2303,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.89}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -351.6, y: 96}
-  m_SizeDelta: {x: 39.9977, y: 21.5565}
+  m_AnchoredPosition: {x: -292.56265, y: 158.2}
+  m_SizeDelta: {x: 181.9385, y: 79.292}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1264049841
 MonoBehaviour:
@@ -2386,7 +2375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
