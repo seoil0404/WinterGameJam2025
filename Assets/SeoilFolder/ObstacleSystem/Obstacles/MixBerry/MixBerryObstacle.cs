@@ -15,12 +15,16 @@ public class MixBerryObstacle : Obstacle
 
     private List<MixBerry> blueBerryList = new();
 
-    private float position;
+    private float position = -1f;
 
     public override float SpawnWeight => 1;
 
     private void Start()
     {
+        if (position == -1f) position = transform.position.z;
+
+        Debug.Log("Start");
+
         transform.position = new Vector3(0, 16.4f, position);
 
         List<(int x, int y)> pool = new List<(int, int)>();

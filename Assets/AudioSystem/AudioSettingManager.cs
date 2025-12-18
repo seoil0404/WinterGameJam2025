@@ -17,6 +17,11 @@ public class AudioSettingManager : MonoBehaviour
         Instance = this;
     }
 
+    public void DisableThis()
+    {
+        gameObject.SetActive(false);
+    }
+
 
     public void SetBGMRate(float bgmRate)
     {
