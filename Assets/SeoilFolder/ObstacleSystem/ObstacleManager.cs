@@ -22,7 +22,7 @@ public class ObstacleManager : MonoBehaviour
 
     public void GenerateObstacle()
     {
-        //Instantiate(obstacleData.MixBerryObstacle).Initialize(MapManager.RecentMapPosition);
+        //Instantiate(obstacleData.CoconutObstacle).Initialize(MapManager.RecentMapPosition);
         //return;
 
         if (WorldManager.Instance.VoidStack > 0)

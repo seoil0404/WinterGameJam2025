@@ -4,6 +4,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance {  get; private set; }
 
+    [SerializeField] private GameOverView gameOverViewPrefab;
+
     private void Awake()
     {
         Instance = this;
@@ -12,5 +14,10 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         AudioManager.Instance.SetBGM(AudioManager.Instance.AudioData.MainBGM);
+    }
+
+    public void GameOver()
+    {
+        Instantiate(gameOverViewPrefab);
     }
 }

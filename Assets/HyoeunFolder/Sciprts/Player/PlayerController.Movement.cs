@@ -1,5 +1,6 @@
 using DG.Tweening;
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 
@@ -39,6 +40,8 @@ public partial class PlayerController
 		m_leftJumpDelay = 0;
 		m_isSit = false;
 		m_jumpCount = 0;
+
+		StartCoroutine(PlayWalkSound());
 	}
 	private void MovementUpdate()
 	{
@@ -48,6 +51,23 @@ public partial class PlayerController
 		Jump();
 		SpeedUp();
 	}
+
+	private IEnumerator PlayWalkSound()
+	{
+        yield return new WaitForSeconds(0.2f);
+		
+		if(m_isGrounded)
+		{
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.AudioData.Walk, 1f);
+
+            EffectManager.Instance.GenerateEffect(
+				EffectManager.Instance.EffectData.Dust,
+				transform.position + Vector3.down * 1f
+				);
+        }
+
+        StartCoroutine(PlayWalkSound());
+    }
 
 	private void Move()
 	{
@@ -70,7 +90,14 @@ public partial class PlayerController
 		{
 			m_rigidbody.linearVelocity = new Vector3(m_rigidbody.linearVelocity.x, 0, m_rigidbody.linearVelocity.z);
 
-			m_rigidbody.AddForce(Vector3.up * m_jumpPorce, ForceMode.Impulse);
+            EffectManager.Instance.GenerateEffect(
+				EffectManager.Instance.EffectData.Jump,
+				transform.position
+				);
+
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.AudioData.Jump);
+
+            m_rigidbody.AddForce(Vector3.up * m_jumpPorce, ForceMode.Impulse);
 
 			m_leftJumpDelay = m_jumpLimitDelay;
 			m_isGrounded = false;

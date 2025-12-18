@@ -9,7 +9,6 @@ public class PauseManager : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1f;
-        settingUI.SetActive(false);
         isPaused = false;
     }
 
@@ -41,6 +40,6 @@ public class PauseManager : MonoBehaviour
         isPaused = false;
 
         settingUI.SetActive(false);
-        SceneManager.LoadScene(sceneName);
+        SceneController.Instance.LoadScene(SceneType.Titlemain);
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using DG.Tweening;
 using NUnit.Framework.Internal.Execution;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,6 +19,10 @@ public class SceneController : MonoBehaviour
 
     public static SceneController Instance { get; private set; }
 
+    [SerializeField] private SceneFadeView sceneFadeViewPrefab; 
+
+    private bool isMoving = false;
+
     private void Awake()
     {
         if (Instance != null)
@@ -33,11 +38,20 @@ public class SceneController : MonoBehaviour
 
     private void Start()
     {
-        //AudioManager.Instance.SetBGM(AudioManager.Instance.AudioData.TestSound);
+        
     }
 
-    public void LoadScene(SceneType sceneName)
+    public void LoadScene(SceneType sceneName, float duration = 1f)
     {
+        StartCoroutine(LoadScene(sceneName.ToString(), duration));
+    }
+
+    private IEnumerator LoadScene(string sceneName, float duration)
+    {
+        Instantiate(sceneFadeViewPrefab).Initialize(duration);
+
+        yield return new WaitForSecondsRealtime(duration / 2);
+
         SceneManager.LoadScene(sceneName.ToString());
     }
 }
