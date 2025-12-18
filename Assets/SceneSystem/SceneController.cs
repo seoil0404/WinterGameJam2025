@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using DG.Tweening;
 using NUnit.Framework.Internal.Execution;
+using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -44,6 +45,11 @@ public class SceneController : MonoBehaviour
     public void LoadScene(SceneType sceneName, float duration = 1f)
     {
         StartCoroutine(LoadScene(sceneName.ToString(), duration));
+    }
+
+    public void LoadSceneWithoutFade(SceneType sceneName)
+    {
+        SceneManager.LoadScene(sceneName.ToString());
     }
 
     private IEnumerator LoadScene(string sceneName, float duration)

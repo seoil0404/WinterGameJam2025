@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TutorialScene.unity
     guid: 4bd00b648be85224a8516e5df2d0e734
+  - enabled: 1
+    path: Assets/Scenes/minji.unity
+    guid: cec888008005dd7468d17eff99f9177c
+  - enabled: 1
+    path: Assets/Scenes/teachme.unity
+    guid: 0d063f61455bf0049b7a066d3e28e7d6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
