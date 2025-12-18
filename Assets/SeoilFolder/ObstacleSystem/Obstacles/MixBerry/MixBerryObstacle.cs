@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class MixBerryObstacle : Obstacle
 {
@@ -14,9 +15,11 @@ public class MixBerryObstacle : Obstacle
 
     private List<MixBerry> blueBerryList = new();
 
+    private float position;
+
     public override float SpawnWeight => 1;
 
-    public override void Initialize(float position)
+    private void Start()
     {
         transform.position = new Vector3(0, 16.4f, position);
 
@@ -26,15 +29,20 @@ public class MixBerryObstacle : Obstacle
             for (int y = -1; y <= 1; y++)
                 pool.Add((x, y));
 
-        for(int index = 0; index < RaspBerryCount; index++)
+        for (int index = 0; index < RaspBerryCount; index++)
         {
             int randomIndex = UnityEngine.Random.Range(0, pool.Count);
             GenerateRaspBerry(pool[randomIndex]);
             pool.RemoveAt(randomIndex);
         }
 
-        foreach(var coordinate in pool)
+        foreach (var coordinate in pool)
             GenerateBlueBerry(coordinate);
+    }
+
+    public override void Initialize(float position)
+    {
+        this.position = position;
     }
 
     private void GenerateRaspBerry((int x, int y) coordinate)
