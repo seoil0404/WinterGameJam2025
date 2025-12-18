@@ -10,7 +10,12 @@ public class CutSceneScript : MonoBehaviour
     private IEnumerator WaitRoadScene()
     {
         yield return new WaitForSeconds(13);
-        SceneController.Instance.LoadScene(SceneType.TutorialScene);
+        SceneController.Instance.LoadScene(SceneType.MainScene);
 
+    }
+
+    public void Skip()
+    {
+        SceneController.Instance.LoadScene(SceneType.MainScene);
     }
 }

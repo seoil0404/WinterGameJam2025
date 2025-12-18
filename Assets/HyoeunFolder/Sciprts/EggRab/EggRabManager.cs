@@ -1,6 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class EggRabManager : MonoBehaviour
 {
@@ -11,10 +12,23 @@ public class EggRabManager : MonoBehaviour
 	[SerializeField] private int m_targetXSpawnpointCount;
 	[SerializeField] private int m_targetYSpawnpointCount;
     [SerializeField] private float m_playingTime;
+    [SerializeField] private Text scoreText;
+    [SerializeField] private EggLabGameOverView eggLabGameOverViewPrefab;
+
+    private bool isEnd = false;
 
     private PlayerController m_player;
     private List<GameObject> m_targets;
-    private int m_score;
+    private int property_m_score;
+    private int m_score
+    {
+        get => property_m_score;
+        set
+        {
+            property_m_score = value;
+            scoreText.text = value.ToString();
+        }
+    }
     private float m_leftPlayingTime;
 
     public int Score => m_score;
@@ -34,11 +48,13 @@ public class EggRabManager : MonoBehaviour
 	private void Update()
 	{
 		m_leftPlayingTime += Time.deltaTime;
-        if(m_leftPlayingTime > m_playingTime)
+        if(m_leftPlayingTime > m_playingTime && !isEnd)
         {
-            Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            isEnd = true;
+
+            Instantiate(eggLabGameOverViewPrefab);
         }
 	}
 	private void Start()
