@@ -13,6 +13,7 @@ public class EggRabManager : MonoBehaviour
 	[SerializeField] private int m_targetYSpawnpointCount;
     [SerializeField] private float m_playingTime;
     [SerializeField] private Text scoreText;
+    [SerializeField] private Text leftTimeText;
     [SerializeField] private EggLabGameOverView eggLabGameOverViewPrefab;
 
     private bool isEnd = false;
@@ -48,6 +49,13 @@ public class EggRabManager : MonoBehaviour
 	private void Update()
 	{
 		m_leftPlayingTime += Time.deltaTime;
+        leftTimeText.text = Mathf.FloorToInt(m_playingTime - m_leftPlayingTime).ToString();
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneController.Instance.LoadScene(SceneType.Titlemain);
+        }
+
         if(m_leftPlayingTime > m_playingTime && !isEnd)
         {
             Cursor.lockState = CursorLockMode.None;
