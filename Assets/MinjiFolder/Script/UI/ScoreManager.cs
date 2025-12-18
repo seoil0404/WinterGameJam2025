@@ -28,7 +28,6 @@ public class ScoreManager : MonoBehaviour
         if (!isPlaying)
             return;
 
-        // 시간 기반 점수 증가
         currentScore += scorePerSecond * Time.deltaTime;
         UpdateScoreUI();
     }

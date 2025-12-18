@@ -3244,13 +3244,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5114857899837989468, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5397368247942962338, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6388752448345054362, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8086678851310080338, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252494354775312994, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 193.48155
       objectReference: {fileID: 0}
     - target: {fileID: 8852031667881522107, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
       propertyPath: m_AnchorMax.y
