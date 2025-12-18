@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39bbd20f74e63cb40bd25a8981bf47d6, type: 3}
+  m_Name: TutorialScript9
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialScript
+  Scripts:
+  - "\uC218\uBC15\uC774 \uAC00\uC6B4\uB370 \uAE38\uC744 \uB9C9\uACE0 \uC788\uC5B4\uC694."
+  - "\uC88C\uD074\uB9AD\uC744 \uD640\uB4DC \uD574 \uC288\uD305 \uBAA8\uB4DC\uC5D0
+    \uB4E4\uC5B4\uAC08 \uC218 \uC788\uC5B4\uC694"
+  - "\uC288\uD305 \uBAA8\uB4DC\uC5D0\uC120 \uC6B0\uD074\uB9AD\uC744 \uD574 \uACC4\uB780\uC744
+    \uC3E0 \uC218 \uC788\uC5B4\uC694!"
+  - "\uC218\uBC15\uC758 \uAC00\uC6B4\uB370 \uBD80\uBD84\uC744 \uC3F4 \uC9C0\uB098\uAC00
+    \uBCF4\uC138\uC694"
+  Quest: "\uC218\uBC15\uC758 \uC911\uC559\uC744 \uB6AB\uACE0 \uC774\uB3D9\uD558\uAE30"
+  SpwanPoint: {x: 0, y: 11, z: 0}
