@@ -20,18 +20,22 @@ public class TutorialManager : MonoBehaviour
 	{
 		StartNextTutorial();
 	}
-
+	public void Update()
+	{
+		if(Input.GetKeyDown(KeyCode.Tab))StartNextTutorial();
+	}
 	public void StartNextTutorial()
 	{
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = false;
 		Time.timeScale = 0;
-
-		m_tutorialCanvas.gameObject.SetActive(true);
-
-		m_tutorialCanvas.SetTutorial(m_tutorialScripts[m_leftTutorialCount]);
-		m_spwanPoint = m_tutorialScripts[m_tutorialScripts.Length].SpwanPoint;
-		m_leftTutorialCount++;
+		if (m_leftTutorialCount < m_tutorialScripts.Length)
+		{
+			m_tutorialCanvas.SetTutorial(m_tutorialScripts[m_leftTutorialCount]);
+			m_spwanPoint = m_tutorialScripts[m_leftTutorialCount].SpwanPoint;
+			m_leftTutorialCount++;
+		}
+		else SceneController.Instance.LoadScene(SceneType.Titlemain);
 
 	}
 
