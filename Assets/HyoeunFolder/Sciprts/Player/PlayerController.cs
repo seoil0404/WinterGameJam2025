@@ -18,9 +18,16 @@ public partial class PlayerController : MonoBehaviour
 
 	public void GameOver()
 	{
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
+		m_isAiming = false;
+
+		m_rigidbody.linearVelocity = Vector3.zero;
+		m_rigidbody.AddForce(new Vector3(0f, m_jumpPorce, 0f), ForceMode.Impulse);
+
 		m_playerCamera.PlayerDeath();
 		m_isPlayingGame = false;
-
+		
 	}
 	private void Awake()
 	{
