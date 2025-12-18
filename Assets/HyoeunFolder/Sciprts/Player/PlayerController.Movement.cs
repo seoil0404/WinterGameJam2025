@@ -100,6 +100,7 @@ public partial class PlayerController
 
             m_rigidbody.AddForce(Vector3.up * m_jumpPorce, ForceMode.Impulse);
 
+			print(m_rigidbody.linearVelocity);
 			m_leftJumpDelay = m_jumpLimitDelay;
 			m_isGrounded = false;
 			m_jumpCount++;

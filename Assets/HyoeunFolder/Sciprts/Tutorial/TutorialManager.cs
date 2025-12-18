@@ -19,6 +19,7 @@ public class TutorialManager : MonoBehaviour
 	private void Start()
 	{
 		StartNextTutorial();
+		WorldManager.Instance.GenerateTutorialMap();
 	}
 	public void Update()
 	{
@@ -36,7 +37,11 @@ public class TutorialManager : MonoBehaviour
 			m_leftTutorialCount++;
 		}
 		else SceneController.Instance.LoadScene(SceneType.Titlemain);
+	}
 
+	public void ReSpwan(GameObject pPlayer)
+	{
+		pPlayer.transform.position = m_spwanPoint;
 	}
 
 }

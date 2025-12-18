@@ -23,3 +23,4 @@ MonoBehaviour:
   jump: {fileID: 8300000, guid: 0e4a59a15c4cb474dac0b69cd6105b7d, type: 3}
   shoot: {fileID: 8300000, guid: dd0ee545a374dec48af34db01b32d47f, type: 3}
   walk: {fileID: 8300000, guid: e973508b47315db4fa3a76802c452160, type: 3}
+  titleBGM: {fileID: 8300000, guid: 64ef231fb373e4e4288cd4d5c2d821f8, type: 3}
