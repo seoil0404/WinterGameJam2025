@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39bbd20f74e63cb40bd25a8981bf47d6, type: 3}
-  m_Name: TutorialScript6 1
+  m_Name: TutorialScript10
   m_EditorClassIdentifier: Assembly-CSharp::TutorialScript
   Scripts:
-  - "\uC55E\uC5D0"
-  - "SpaceBar\uB97C \uB20C\uB7EC \uC810\uD504\uD574 \uB6F0\uC5B4\uB118\uC5B4\uBCF4\uC138\uC694!"
-  Quest: "SpaceBar\uB85C \uC810\uD504\uD574 \uB118\uC5B4\uAC00\uAE30"
+  - "\uC544\uBCF4\uCE74\uB3C4\uAC00 \uAE38\uC744 \uB9C9\uACE0 \uC788\uC5B4\uC694"
+  - "\uC544\uBCF4\uCE74\uB3C4\uC758 \uC528 \uBD80\uBD84\uC744 \uC3F4\uBCF4\uC138\uC694!"
+  Quest: "\uC544\uBCF4\uCE74\uB3C4\uC758 \uC528\uB97C \uB6AB\uC5B4 \uC9C0\uB098\uAC00\uAE30"
   SpwanPoint: {x: 0, y: 11, z: 0}

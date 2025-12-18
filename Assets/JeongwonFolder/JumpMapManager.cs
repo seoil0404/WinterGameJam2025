@@ -6,7 +6,17 @@ using UnityEngine.SceneManagement;
 public class JumpMapManager : MonoBehaviour
 {
     [SerializeField] private float _loadSceneTime;
-    private void OnCollisionEnter(Collision collision)
+
+	private void Awake()
+	{
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
+	}
+	private void Update()
+	{
+		if(Input.GetKeyUp(KeyCode.Escape)) SceneController.Instance.LoadScene(SceneType.Titlemain);
+	}
+	private void OnCollisionEnter(Collision collision)
     {
         StartCoroutine(GameClear());
         
@@ -19,6 +29,8 @@ public class JumpMapManager : MonoBehaviour
     private IEnumerator GameClear()
     {
         yield return new WaitForSeconds(_loadSceneTime);
-        SceneManager.LoadScene("Titlemain");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        SceneController.Instance.LoadScene(SceneType.Titlemain);
     }
 }
