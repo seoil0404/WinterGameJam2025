@@ -315,7 +315,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9045714584096247725}
+        m_TargetAssemblyTypeName: AudioSettingManager, Assembly-CSharp
+        m_MethodName: SetBGMRate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1915053196987374621
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,6 +416,7 @@ GameObject:
   - component: {fileID: 3466970051722627346}
   - component: {fileID: 1560101568779609718}
   - component: {fileID: 183995923997883284}
+  - component: {fileID: 9045714584096247725}
   m_Layer: 5
   m_Name: SettingUI
   m_TagString: Untagged
@@ -506,6 +519,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae1090c0450c1b5419262836cb95e6cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DontDestroyOnLoadObject
+--- !u!114 &9045714584096247725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2650090878468271462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 340bb4964f170a443a050d1b3ac9b76e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioSettingManager
 --- !u!1 &2845726869617989740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,7 +1708,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f468e381d3fe97c408778e4bfb97c966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SettingPopup
-  SettingUI: {fileID: 2650090878468271462}
   toggle: {fileID: 0}
 --- !u!1 &8798092008292431134
 GameObject:
@@ -1774,7 +1798,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9045714584096247725}
+        m_TargetAssemblyTypeName: AudioSettingManager, Assembly-CSharp
+        m_MethodName: SetSFXRate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8804299368274657759
 GameObject:
   m_ObjectHideFlags: 0
