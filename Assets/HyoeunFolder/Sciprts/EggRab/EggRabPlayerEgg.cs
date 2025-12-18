@@ -4,19 +4,31 @@ public class EggRabPlayerEgg : Egg
 {
 	public override void Init(Vector3 pDir, float pSpeed, int pDamage)
 	{
-		GetComponent<Rigidbody>().AddForce(pDir * pSpeed, ForceMode.Impulse);
+		m_speed = pSpeed;
+		m_direction = pDir;
 		m_damage = pDamage;
 	}
-	private void OnTriggerEnter(Collider pCollsion)
+	private void Update()
 	{
-		EggRabTarget target;
-		if (pCollsion.transform.TryGetComponent<EggRabTarget>(out target))
+		this.transform.position += m_direction * m_speed * Time.deltaTime;
+	}
+	private void OnTriggerStay(Collider pCollsion)
+	{
+
+		if (!pCollsion.transform.CompareTag("Player"))
 		{
-			target.GiveDamage(m_damage);
-			Destroy(this.gameObject);
-		}
-		else if (!pCollsion.transform.CompareTag("Player"))
-		{
+			EggRabTarget target;
+			EggRabManager manager;
+			print("Ãæµ¹");
+
+			if (pCollsion.transform.TryGetComponent<EggRabTarget>(out target))
+			{
+				target.GiveDamage(m_damage);
+			}
+			else
+			{
+				EggRabManager.Instance.Miss();
+			}
 			Destroy(this.gameObject);
 		}
 		else return;

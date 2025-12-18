@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class EggRabTarget : Entity
 {
-    protected override void Kill()
+	public void Awake()
+	{
+	}
+	protected override void Kill()
     {
-        EggRabManager.Instance.TargetGenerate(this.gameObject);
+        EggRabManager.Instance.TargetGenerate(this.transform.gameObject);
     }
 }

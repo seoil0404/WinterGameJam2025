@@ -1,2 +1,12 @@
 fileFormatVersion: 2
 guid: 44fe47b9e655ec34cb0cbee120f65a99
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - sceneFadeViewPrefab: {fileID: 4795726613636228091, guid: afd6d88ee14e62542b60f65e76739b32, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -31,9 +31,11 @@ public class MapManager : MonoBehaviour
         TangerineLength = tangerinePrefab.Length;
     }
 
-    public void AddMap(MapType type)
+    public Map AddMap(MapType type)
     {
         RecentMapPosition = TangerineLength * currentMapCount;
+
+        Map map;
 
         switch (type)
         {
@@ -51,6 +53,8 @@ public class MapManager : MonoBehaviour
 
                 currentMapCount++;
 
+                map = tangerine;
+
                 break;
 
             case MapType.Void:
@@ -67,7 +71,14 @@ public class MapManager : MonoBehaviour
 
                 currentMapCount++;
 
+                map = voidTangerine;
+
+                break;
+            default:
+                map = new();
                 break;
         }
+
+        return map;
     }
 }

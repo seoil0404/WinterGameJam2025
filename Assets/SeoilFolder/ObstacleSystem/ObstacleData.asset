@@ -12,14 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c8afe8436816744a9736ee099998c1, type: 3}
   m_Name: ObstacleData
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleData
-  TestObstacle: {fileID: 8930801286043321105, guid: 6f8b3c4454c631d4582028701a408619, type: 3}
-  OrangeObstacle: {fileID: -6326062282397596436, guid: 91ec43d0e1066fc4e8e952e068e2bb68, type: 3}
   PineAppleObstacle: {fileID: 3535015843884369625, guid: 473f2e025bc95ca4c855625aebb34803, type: 3}
-  StarFruitObstacle: {fileID: 4917894177175014973, guid: 578e3d8875ddf2247883dd723e41736f, type: 3}
+  CoconutObstacle: {fileID: -1809150576591168500, guid: ed14b926952cc9140b0ed46e3ea848ab, type: 3}
+  CherryObstacle: {fileID: 7562971468726940755, guid: 571e2c88e8777a444abc5ad1ff829708, type: 3}
+  BananaObstacle: {fileID: -2586208758421988934, guid: 1458ec5971b32e74993b3020c6dc30d3, type: 3}
+  OrangeObstacle: {fileID: -6326062282397596436, guid: 91ec43d0e1066fc4e8e952e068e2bb68, type: 3}
   AvocadoObstacle: {fileID: 2166352899578614369, guid: b146db60029803347b3d691db27db846, type: 3}
   RabbitAppleObstacle: {fileID: -45195983540506238, guid: 7ecbda10ff91b1d4b8cc37c12cd763c9, type: 3}
   MixBerryObstacle: {fileID: 2701810032236112420, guid: a04aa2109eab13b409e6a461fe7814af, type: 3}
   WaterMelonObstacle: {fileID: -6605906802532724010, guid: 7959b3352166e02468d780508fbe7f8e, type: 3}
-  CoconutObstacle: {fileID: -1809150576591168500, guid: ed14b926952cc9140b0ed46e3ea848ab, type: 3}
-  CherryObstacle: {fileID: 7562971468726940755, guid: 571e2c88e8777a444abc5ad1ff829708, type: 3}
-  BananaObstacle: {fileID: -2586208758421988934, guid: 1458ec5971b32e74993b3020c6dc30d3, type: 3}

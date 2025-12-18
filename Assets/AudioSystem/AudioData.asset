@@ -20,3 +20,6 @@ MonoBehaviour:
   applePeel: {fileID: 8300000, guid: b4610dd8b5abd3c43ac32d30c4b0c3cd, type: 3}
   coconutExplosion: {fileID: 8300000, guid: 5d01bb9188ab4e8418b8f74dbbdd6714, type: 3}
   waterMelonExplosion: {fileID: 8300000, guid: d134e9cf163fdce45ac04b5edef59e99, type: 3}
+  jump: {fileID: 8300000, guid: 0e4a59a15c4cb474dac0b69cd6105b7d, type: 3}
+  shoot: {fileID: 8300000, guid: dd0ee545a374dec48af34db01b32d47f, type: 3}
+  walk: {fileID: 8300000, guid: e973508b47315db4fa3a76802c452160, type: 3}

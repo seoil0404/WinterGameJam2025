@@ -7,7 +7,6 @@ public class WorldManager : MonoBehaviour
     [SerializeField] private Transform playerTransform;
 
     [SerializeField] private float loadDistance;
-    [SerializeField] private bool generateObstacle;
 
     private int voidStack = 0;
 
@@ -20,7 +19,7 @@ public class WorldManager : MonoBehaviour
 
     private void Start()
     {
-        MapManager.Instance.AddMap(MapType.Tangerine);
+        MapManager.Instance.AddMap(MapType.Tangerine).GetComponent<AppearAnimationController>().StopAnimation();
         DecorateManager.Instance.GenerateDecorate();
         MapManager.Instance.AddMap(MapType.Tangerine);
         DecorateManager.Instance.GenerateDecorate();
@@ -31,13 +30,6 @@ public class WorldManager : MonoBehaviour
     {
         if(playerTransform.position.z >= MapManager.RecentMapPosition - loadDistance)
         {
-            if(!generateObstacle)
-            {
-                MapManager.Instance.AddMap(MapType.Tangerine);
-                //MapManager.Instance.AddMap(MapType.Tangerine);
-                return;
-            }
-
             if(UnityEngine.Random.Range(0, 12) == 0 && voidStack == 0)
             {
                 voidStack++;
@@ -49,6 +41,7 @@ public class WorldManager : MonoBehaviour
                 MapManager.Instance.AddMap(MapType.Tangerine);
                 //MapManager.Instance.AddMap(MapType.Tangerine);
                 ObstacleManager.Instance.GenerateObstacle();
+                BananaManager.Instance.GenerateBanana();
                 voidStack = 0;
             }
 
@@ -58,7 +51,7 @@ public class WorldManager : MonoBehaviour
 
     public void GenerateTutorialMap()
     {
-        MapManager.Instance.AddMap(MapType.Tangerine);
+        MapManager.Instance.AddMap(MapType.Tangerine).GetComponent<AppearAnimationController>().StopAnimation();
         ObstacleManager.Instance.GenerateObstacle(ObstacleManager.Instance.ObstacleData.BananaObstacle);
 
         MapManager.Instance.AddMap(MapType.Tangerine);

@@ -6,39 +6,62 @@ public class EggRabManager : MonoBehaviour
 {
     public static EggRabManager Instance;
 
-    public GameObject TargetPrefeb;
-    public int TargetCount;
-    public int TargetXSpawnpointCount;
-    public int TargetYSpawnpointCount;
-    private List<GameObject> Targets;
+    [SerializeField] private GameObject m_targetPrefeb;
+	[SerializeField] private int m_targetCount;
+	[SerializeField] private int m_targetXSpawnpointCount;
+	[SerializeField] private int m_targetYSpawnpointCount;
+    [SerializeField] private float m_playingTime;
+
+    private PlayerController m_player;
+    private List<GameObject> m_targets;
+    private int m_score;
+    private float m_leftPlayingTime;
+
+    public int Score => m_score;
+
+    public void Miss()
+    {
+        m_score -= 2;
+        if(m_score < 0)m_score = 0;
+    }
     private void Awake()
     {
-        Targets = new List<GameObject>();
+        m_targets = new List<GameObject>();
         Instance = this;
-        for (int i = 0; i < TargetCount; i++)
-        {
-            TargetGenerate();
-        }
+        m_score = 0;
+        m_leftPlayingTime = 0;
     }
+	private void Update()
+	{
+		m_leftPlayingTime += Time.deltaTime;
+        if(m_leftPlayingTime > m_playingTime)
+        {
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+	}
+	private void Start()
+	{
+		m_player = PlayerController.Instance;
+
+		for (int i = 0; i < m_targetCount; i++)
+		{
+			TargetGenerate();
+		}
+	}
 	public void TargetGenerate()
 	{
 		Vector3 position = GetRandomPos();
-		Targets.Add(Instantiate(TargetPrefeb, position, Quaternion.identity));
+		m_targets.Add(Instantiate(m_targetPrefeb, position, Quaternion.identity));
 	}
 	public void TargetGenerate(GameObject pTarget)
     {
-        GameObject target = null;
-        foreach (GameObject i in Targets)
-        {
-            if (i == pTarget)
-            {
-                target = i;
-                break;
-            }
-            Destroy(target);
-        }
+        m_targets.Remove(pTarget);
+        Destroy(pTarget);
         Vector3 position = GetRandomPos();
-        Targets.Add(Instantiate(TargetPrefeb, position, Quaternion.identity));
+        m_targets.Add(Instantiate(m_targetPrefeb, position, Quaternion.identity));
+        m_score += 3;
     }
     private Vector3 GetRandomPos()
     {
@@ -47,16 +70,15 @@ public class EggRabManager : MonoBehaviour
         {
             bool isMatch = false;
 
-            randomPos.x = Random.Range(0, TargetXSpawnpointCount);
-            randomPos.y = Random.Range(0, TargetYSpawnpointCount);
-            for (int i = 0; i < Targets.Count; i++)
+            randomPos.x = Random.Range(0-m_targetXSpawnpointCount/2, m_targetXSpawnpointCount/2);
+            randomPos.y = Random.Range(3, m_targetYSpawnpointCount);
+            for (int i = 0; i < m_targets.Count; i++)
             {
-                if (randomPos == Targets[i].transform.position)isMatch = true;
+                if (randomPos == m_targets[i].transform.position)isMatch = true;
             }
             if (!isMatch) break;
         }
-        Debug.Log($"{randomPos}");
+        randomPos += new Vector3(0, m_player.transform.position.y, 0);
         return randomPos;
     }
-    
 }
