@@ -10,22 +10,30 @@ public class TutorialManager : MonoBehaviour
 	private TutorialCanvas m_tutorialCanvas;
 	private int m_leftTutorialCount;
 
+	public void ReLoadTutorial()
+	{
+		PlayerPrefs.SetFloat("TutorialX", m_spwanPoint.x);
+		PlayerPrefs.SetFloat("TutorialY", m_spwanPoint.y);
+		PlayerPrefs.SetFloat("TutorialZ", m_spwanPoint.z);
+		PlayerPrefs.SetFloat("TutorialLevel", m_leftTutorialCount);
+
+		SceneController.Instance.LoadScene(SceneType.TutorialScene);
+	}
 	private void Awake()
 	{
-		m_leftTutorialCount = 0;
+		m_leftTutorialCount = PlayerPrefs.GetInt("TutorialLevel");
 		Instance = this;
 		m_tutorialCanvas = Instantiate(m_tutorialCanvasPrefab).GetComponent<TutorialCanvas>();
 	}
 	private void Start()
 	{
-		StartNextTutorial();
-		WorldManager.Instance.GenerateTutorialMap();
+		StartNextTutorial(this.transform.position);
 	}
 	public void Update()
 	{
-		if(Input.GetKeyDown(KeyCode.Tab))StartNextTutorial();
+		
 	}
-	public void StartNextTutorial()
+	public void StartNextTutorial(Vector3 pSpwanPoint)
 	{
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = false;
@@ -33,7 +41,7 @@ public class TutorialManager : MonoBehaviour
 		if (m_leftTutorialCount < m_tutorialScripts.Length)
 		{
 			m_tutorialCanvas.SetTutorial(m_tutorialScripts[m_leftTutorialCount]);
-			m_spwanPoint = m_tutorialScripts[m_leftTutorialCount].SpwanPoint;
+			m_spwanPoint = pSpwanPoint;
 			m_leftTutorialCount++;
 		}
 		else SceneController.Instance.LoadScene(SceneType.Titlemain);

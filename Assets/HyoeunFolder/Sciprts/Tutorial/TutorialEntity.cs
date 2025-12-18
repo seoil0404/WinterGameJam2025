@@ -2,13 +2,16 @@ using UnityEngine;
 
 public class TutorialEntity : Entity
 {
-    void Start()
-    {
-        
-    }
+	private bool m_isTutorialPlaying;
 
-    void Update()
-    {
-        
-    }
+	private void Awake()
+	{
+		m_isTutorialPlaying = false;
+	}
+	private void OnTriggerEnter(Collider collision)
+	{
+		if (m_isTutorialPlaying) return;
+
+		if(collision.transform.CompareTag("Player"))TutorialManager.Instance.StartNextTutorial(this.transform.position);
+	}
 }
