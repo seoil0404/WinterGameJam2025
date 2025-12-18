@@ -933,7 +933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldManager
   playerTransform: {fileID: 2020079706}
-  loadDistance: 40
+  loadDistance: 60
 --- !u!4 &478666938
 Transform:
   m_ObjectHideFlags: 0
