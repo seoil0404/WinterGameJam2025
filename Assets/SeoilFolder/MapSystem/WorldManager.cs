@@ -52,21 +52,45 @@ public class WorldManager : MonoBehaviour
     public void GenerateTutorialMap()
     {
         MapManager.Instance.AddMap(MapType.Tangerine).GetComponent<AppearAnimationController>().StopAnimation();
-        ObstacleManager.Instance.GenerateObstacle(ObstacleManager.Instance.ObstacleData.BananaObstacle);
 
         MapManager.Instance.AddMap(MapType.Tangerine);
-        ObstacleManager.Instance.GenerateObstacle(ObstacleManager.Instance.ObstacleData.CoconutObstacle);
+        MapManager.Instance.AddMap(MapType.Tangerine);
+		ObstacleManager.Instance.GenerateObstacle(ObstacleManager.Instance.ObstacleData.BananaObstacle);
 
         MapManager.Instance.AddMap(MapType.Tangerine);
-        ObstacleManager.Instance.GenerateObstacle(ObstacleManager.Instance.ObstacleData.BananaObstacle);
+        MapManager.Instance.AddMap(MapType.Tangerine);
+		ObstacleManager.Instance.GenerateObstacle(ObstacleManager.Instance.ObstacleData.PineAppleObstacle);
+
 
         MapManager.Instance.AddMap(MapType.Tangerine);
-        ObstacleManager.Instance.GenerateObstacle(ObstacleManager.Instance.ObstacleData.CoconutObstacle);
+        MapManager.Instance.AddMap(MapType.Tangerine);
+		ObstacleManager.Instance.GenerateObstacle(ObstacleManager.Instance.ObstacleData.CoconutObstacle);
+
+		MapManager.Instance.AddMap(MapType.Tangerine);
+		MapManager.Instance.AddMap(MapType.Void);
 
         MapManager.Instance.AddMap(MapType.Tangerine);
-        ObstacleManager.Instance.GenerateObstacle(ObstacleManager.Instance.ObstacleData.BananaObstacle);
-
         MapManager.Instance.AddMap(MapType.Tangerine);
-        ObstacleManager.Instance.GenerateObstacle(ObstacleManager.Instance.ObstacleData.CoconutObstacle);
-    }
+		ObstacleManager.Instance.GenerateObstacle(ObstacleManager.Instance.ObstacleData.CherryObstacle);
+
+		MapManager.Instance.AddMap(MapType.Tangerine);
+        MapManager.Instance.AddMap(MapType.Tangerine);
+		ObstacleManager.Instance.GenerateObstacle(ObstacleManager.Instance.ObstacleData.OrangeObstacle);
+
+		MapManager.Instance.AddMap(MapType.Tangerine);
+		MapManager.Instance.AddMap(MapType.Tangerine);
+		ObstacleManager.Instance.GenerateObstacle(ObstacleManager.Instance.ObstacleData.WaterMelonObstacle);
+
+		MapManager.Instance.AddMap(MapType.Tangerine);
+		MapManager.Instance.AddMap(MapType.Tangerine);
+		ObstacleManager.Instance.GenerateObstacle(ObstacleManager.Instance.ObstacleData.AvocadoObstacle);
+
+		MapManager.Instance.AddMap(MapType.Tangerine);
+		MapManager.Instance.AddMap(MapType.Tangerine);
+		ObstacleManager.Instance.GenerateObstacle(ObstacleManager.Instance.ObstacleData.RabbitAppleObstacle);
+
+		MapManager.Instance.AddMap(MapType.Tangerine);
+		MapManager.Instance.AddMap(MapType.Tangerine);
+		ObstacleManager.Instance.GenerateObstacle(ObstacleManager.Instance.ObstacleData.MixBerryObstacle);
+	}
 }

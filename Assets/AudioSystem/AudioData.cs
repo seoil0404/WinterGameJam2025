@@ -14,6 +14,7 @@ public class AudioData : ScriptableObject
     [SerializeField] private AudioClip jump;
     [SerializeField] private AudioClip shoot;
     [SerializeField] private AudioClip walk;
+    [SerializeField] private AudioClip titleBGM;
 
     public AudioClip Jump => jump;
     public AudioClip Shoot => shoot;
@@ -26,4 +27,5 @@ public class AudioData : ScriptableObject
     public AudioClip ApplePeel => applePeel;
     public AudioClip CoconutExplosion => coconutExplosion;
     public AudioClip WaterMelonExplosion => waterMelonExplosion;
+    public AudioClip TitleBGM => titleBGM;
 }
