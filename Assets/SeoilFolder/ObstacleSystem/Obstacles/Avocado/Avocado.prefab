@@ -206,6 +206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AvocadoSeed
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58fdc900d3f63e548a15418b7ddf2e88, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

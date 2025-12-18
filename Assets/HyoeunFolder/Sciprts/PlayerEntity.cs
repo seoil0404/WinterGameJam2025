@@ -9,7 +9,6 @@ public class PlayerEntity : Entity
 		PlayerController.Instance.GameOver();
 		GameManager.Instance.GameOver();
 	}
-
 	private void OnCollisionEnter(Collision pCollision)
 	{
 		Obstacle collsion;

@@ -15,6 +15,7 @@ MonoBehaviour:
   Scripts:
   - "\uB7F0 \uB9AC\uCE58\uC5D0 \uC624\uC2E0 \uAC78 \uD658\uC601\uD569\uB2C8\uB2E4!"
   - "\uC559\uAC1C\uBAA8\uB760"
-  Quest: "Space\uB97C \uB20C\uB7EC \uC810\uD504 \uD574, \uCC22\uAE34 \uADE4 \uC0AC\uC774\uB97C
-    \uB6F0\uC5B4 \uB118\uC73C\uC138\uC694!"
+  - "\uC559\uAC1C\uBAA8\uB760"
+  - sd
+  Quest: 
   SpwanPoint: {x: 0, y: 11, z: 0}
