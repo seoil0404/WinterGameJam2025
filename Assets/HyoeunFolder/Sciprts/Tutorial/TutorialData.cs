@@ -5,13 +5,11 @@ public class TutorialData : MonoBehaviour
 {
 	private void Awake()
 	{
-		if(SceneManager.GetActiveScene().name == "Titlemain")
-		{
-			PlayerPrefs.SetFloat("TutorialX", 0f);
-			PlayerPrefs.SetFloat("TutorialY", 10.8f);
-			PlayerPrefs.SetFloat("TutorialZ", -32.8f);
-			PlayerPrefs.SetInt("TutorialLevel", 0);
-
-		}
+		PlayerPrefs.SetFloat("TutorialX", 0f);
+		PlayerPrefs.SetFloat("TutorialY", 10.8f);
+		PlayerPrefs.SetFloat("TutorialZ", -32.8f);
+		PlayerPrefs.SetInt("TutorialLevel", 0);
+		Debug.Log(new Vector3(PlayerPrefs.GetFloat("TutorialX"), PlayerPrefs.GetFloat("TutorialY"), PlayerPrefs.GetFloat("TutorialZ")));
+		Debug.Log(PlayerPrefs.GetInt("TutorialLevel"));
 	}
 }
