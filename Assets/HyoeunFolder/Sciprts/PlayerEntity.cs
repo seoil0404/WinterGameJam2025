@@ -7,6 +7,7 @@ public class PlayerEntity : Entity
 	{
 		GetComponent<Animator>().SetBool("Death", true);
 		PlayerController.Instance.GameOver();
+		GameManager.Instance.GameOver();
 	}
 
 	private void OnCollisionEnter(Collision pCollision)

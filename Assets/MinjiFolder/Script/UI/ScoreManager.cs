@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
+    public static ScoreManager Instance { get; private set; }
     [Header("UI")]
     [SerializeField] private Text scoreText;
 
@@ -12,8 +13,11 @@ public class ScoreManager : MonoBehaviour
 
     private float currentScore = 0f;
     private bool isPlaying = true;
-
-    void Start()
+	private void Awake()
+	{
+		Instance = this;
+	}
+	void Start()
     {
         currentScore = 0f;
         UpdateScoreUI();
