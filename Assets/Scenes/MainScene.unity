@@ -1705,6 +1705,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 145417435437132403, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1262082609}
     - target: {fileID: 1521384474108047813, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1827,6 +1831,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2650090878468271462, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
   m_PrefabInstance: {fileID: 1262082607}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1262082609 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3002178257268159042, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
+  m_PrefabInstance: {fileID: 1262082607}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f468e381d3fe97c408778e4bfb97c966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingPopup
 --- !u!1 &1295271062
 GameObject:
   m_ObjectHideFlags: 0
