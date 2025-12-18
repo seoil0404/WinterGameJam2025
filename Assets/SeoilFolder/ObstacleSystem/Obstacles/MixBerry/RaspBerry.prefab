@@ -64,9 +64,25 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -3215555783603854218, guid: 282542d1ad5a6df418d4d2d73e7d24ad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 282542d1ad5a6df418d4d2d73e7d24ad, type: 3}
       propertyPath: m_Name
       value: RaspBerry
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 282542d1ad5a6df418d4d2d73e7d24ad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3743993344710040121, guid: 282542d1ad5a6df418d4d2d73e7d24ad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424396828587804706, guid: 282542d1ad5a6df418d4d2d73e7d24ad, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

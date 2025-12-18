@@ -23,7 +23,7 @@ public partial class PlayerController : MonoBehaviour
 		m_isAiming = false;
 
 		m_rigidbody.linearVelocity = Vector3.zero;
-		m_rigidbody.AddForce(new Vector3(0f, m_jumpPorce, 0f), ForceMode.Impulse);
+		m_rigidbody.AddForce(new Vector3(0f, m_jumpPorce, -m_jumpPorce) * 2, ForceMode.Impulse);
 
 		m_playerCamera.PlayerDeath();
 		m_isPlayingGame = false;

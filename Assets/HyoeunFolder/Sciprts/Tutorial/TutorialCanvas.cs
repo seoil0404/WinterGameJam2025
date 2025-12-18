@@ -24,6 +24,7 @@ public class TutorialCanvas : MonoBehaviour
 
 	public void NextPage()
 	{
+		Debug.Log($"{m_leftScriptCount} < {m_script.Scripts.Length}");
 		if (m_leftScriptCount < m_script.Scripts.Length)
 		{
 			m_scriptText.text = m_script.Scripts[m_leftScriptCount];
@@ -31,12 +32,13 @@ public class TutorialCanvas : MonoBehaviour
 		}
 		else
 		{
-			if(m_script.Quest != null)
+			if (m_script.Quest != "")
 			{
 				m_questText.text = m_script.Quest;
 				m_questImage.gameObject.SetActive(true);
 			}
-			this.gameObject.SetActive(false);
+			else m_questImage.gameObject.SetActive(false);
+			m_scriptImage.gameObject.SetActive(false);
 
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = true;

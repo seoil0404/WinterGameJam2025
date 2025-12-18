@@ -52,24 +52,24 @@ public partial class PlayerController
 
 		AudioManager.Instance.PlaySFX(AudioManager.Instance.AudioData.Shoot);
 
-		Vector3 eggPos = m_player.transform.position + new Vector3(0f, 0.5f, 0);
-		Vector3 targetPos = GetCameraAimPointFromMuzzle(20f);
+		Vector3 eggPos = m_player.transform.position + new Vector3(0f, m_player.transform.localScale.y / 2, 0);
+		Vector3 targetPos = GetCameraAimPointFromMuzzle(200f);
 
 		Vector3 dir = (targetPos - eggPos).normalized * m_eggSpeed;
 
 		GameObject egg = Instantiate(m_eggPrefab, eggPos, Quaternion.identity);
 		egg.GetComponent<Egg>().Init(dir, m_eggSpeed, m_eggDamage);
 	}
-	private Vector3 GetCameraAimPointFromMuzzle(float pMaxDistance = 10)
+	private Vector3 GetCameraAimPointFromMuzzle(float pMaxDistance = 20)
 	{
 		Vector3 point = Vector3.zero;
 
 		Ray targetRay = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 		RaycastHit target;
 		Vector3 targetPos;
+			print("targetPos");
 		if (Physics.Raycast(targetRay, out target, pMaxDistance, LayerMask.GetMask("Map", "HitableObject")))
 		{
-			print("targetPos");
 			targetPos = target.point;
 		}
 		else
