@@ -62,7 +62,7 @@ public class AudioManager : MonoBehaviour
     {
         AudioSource audioSource = GetAvailableSFXSource();
         audioSource.clip = clip;
-        audioSource.volume = volume;
+        audioSource.volume = volume * AudioSettingManager.Instance.SFXRate;
         audioSource.Play();
         Debug.Log("Played");
     }
@@ -79,5 +79,10 @@ public class AudioManager : MonoBehaviour
         sfxSourcePool.Add(newSource);
 
         return newSource;
+    }
+
+    public void SyncBGM(float volume)
+    {
+        bgmSourcePool.First.Value.volume =  volume;
     }
 }

@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class SettingPopup : MonoBehaviour
 {
-    public GameObject SettingUI;
     public Toggle toggle;
 
     private void Awake()
@@ -13,11 +12,11 @@ public class SettingPopup : MonoBehaviour
 
     public void OpenSetting()
     {
-        SettingUI.SetActive(!SettingUI.activeSelf);
+        SettingUI.Instance.gameObject.SetActive(!SettingUI.Instance.gameObject.activeSelf);
     }
     public void CloseSetting()
     {
-        SettingUI.SetActive(false);
+        SettingUI.Instance.gameObject.SetActive(false);
     }
     public void onFullscreenmod()
     {
