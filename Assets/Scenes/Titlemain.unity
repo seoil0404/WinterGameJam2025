@@ -1569,17 +1569,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &969379500 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3002178257268159042, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
-  m_PrefabInstance: {fileID: 1793700557074781453}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f468e381d3fe97c408778e4bfb97c966, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SettingPopup
 --- !u!1 &1013615419
 GameObject:
   m_ObjectHideFlags: 0
@@ -3928,41 +3917,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 145417435437132403, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 969379500}
-    - target: {fileID: 1521384474108047813, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2549246504420062776, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2549246504420062776, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2549246504420062776, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
-      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2650090878468271462, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
       propertyPath: m_Name
       value: SettingUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 2650090878468271462, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3569741555893978733, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4777500662925724514, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
-      propertyPath: m_Value
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5029367171032033218, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
       propertyPath: m_Pivot.x
@@ -4044,44 +4005,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5114857899837989468, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5397368247942962338, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5397368247942962338, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6388752448345054362, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
-      propertyPath: m_FontData.m_FontStyle
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8086678851310080338, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8086678851310080338, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8086678851310080338, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8252494354775312994, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 193.48155
-      objectReference: {fileID: 0}
-    - target: {fileID: 8373971827513968991, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
-      propertyPath: m_Value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8852031667881522107, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
-      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8852031667881522107, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
