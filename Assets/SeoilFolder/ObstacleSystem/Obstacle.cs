@@ -6,6 +6,11 @@ public abstract class Obstacle : MonoBehaviour
 
     public abstract void Initialize(float position);
 
+    public virtual void Reload()
+    {
+
+    }
+
     protected void SetRandomLinedPosition(float position)
     {
         transform.position = new Vector3(

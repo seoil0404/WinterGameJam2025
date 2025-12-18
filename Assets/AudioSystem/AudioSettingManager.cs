@@ -12,6 +12,7 @@ public class AudioSettingManager : MonoBehaviour
         Instance = this;
     }
 
+
     public void SetBGMRate(float bgmRate)
     {
         BGMRate = bgmRate;
