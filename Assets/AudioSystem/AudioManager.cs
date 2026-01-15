@@ -42,6 +42,8 @@ public class AudioManager : MonoBehaviour
         if (bgmSourcePool.Count <= 0) bgmSourcePool.AddFirst(Instantiate(bgmPrefab, transform));
         if (clip == bgmSourcePool.First.Value) return;
 
+        volume *= AudioSettingManager.BGMRate;
+
         bgmSourcePool.First.Value.DOKill();
         bgmSourcePool.First.Value.DOFade(0, fadeDuration);
         bgmSourcePool.AddLast(bgmSourcePool.First.Value);
