@@ -6,6 +6,7 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance { get; private set; }
     private static string MaxScore = "MaxScore";
+    private static string ScoreDataKey = "ScoreData";
 
     [Header("UI")]
     [SerializeField] private Text scoreText;
@@ -15,6 +16,23 @@ public class ScoreManager : MonoBehaviour
 
     private float currentScore = 0f;
     private bool isPlaying = true;
+
+    public static string ScoreData
+    {
+        get
+        {
+            if(!PlayerPrefs.HasKey(ScoreDataKey))
+            {
+                return "";
+            }
+            return PlayerPrefs.GetString(ScoreDataKey);
+        }
+        set
+        {
+            PlayerPrefs.SetString(ScoreDataKey, value);
+        }
+    }
+
 	private void Awake()
 	{
 		Instance = this;
@@ -43,6 +61,8 @@ public class ScoreManager : MonoBehaviour
     {
         if(GetMaxScore() < GetScore())
             PlayerPrefs.SetInt(MaxScore, GetScore());
+
+        ScoreData += GetScore() + ",";
 
         isPlaying = false;
     }

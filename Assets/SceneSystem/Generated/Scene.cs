@@ -6,4 +6,5 @@ public enum SceneType {
 	TutorialScene,
 	minji,
 	teachme,
+	ChartScene,
 }
