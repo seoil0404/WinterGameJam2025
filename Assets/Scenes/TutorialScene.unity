@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 72622309}
   - component: {fileID: 72622311}
   - component: {fileID: 72622310}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tuto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -780,7 +780,7 @@ GameObject:
   - component: {fileID: 457465530}
   - component: {fileID: 457465532}
   - component: {fileID: 457465531}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tuto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -848,7 +848,7 @@ GameObject:
   - component: {fileID: 513735654}
   - component: {fileID: 513735656}
   - component: {fileID: 513735655}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tuto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -916,7 +916,7 @@ GameObject:
   - component: {fileID: 522912336}
   - component: {fileID: 522912338}
   - component: {fileID: 522912337}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tuto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1355,7 +1355,7 @@ GameObject:
   - component: {fileID: 1126857653}
   - component: {fileID: 1126857655}
   - component: {fileID: 1126857654}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tuto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1423,7 +1423,7 @@ GameObject:
   - component: {fileID: 1142144570}
   - component: {fileID: 1142144572}
   - component: {fileID: 1142144571}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tuto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1501,7 +1501,7 @@ GameObject:
   - component: {fileID: 1416927449}
   - component: {fileID: 1416927451}
   - component: {fileID: 1416927450}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tuto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1685,7 +1685,7 @@ GameObject:
   - component: {fileID: 1634071904}
   - component: {fileID: 1634071906}
   - component: {fileID: 1634071905}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tuto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1758,7 +1758,7 @@ GameObject:
   - component: {fileID: 1761862986}
   - component: {fileID: 1761862988}
   - component: {fileID: 1761862987}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tuto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1826,7 +1826,7 @@ GameObject:
   - component: {fileID: 1836884569}
   - component: {fileID: 1836884571}
   - component: {fileID: 1836884570}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tuto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1979,7 +1979,7 @@ GameObject:
   - component: {fileID: 1903503462}
   - component: {fileID: 1903503464}
   - component: {fileID: 1903503463}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tuto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
