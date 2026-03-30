@@ -7,6 +7,8 @@ public class TutorialManager : MonoBehaviour
 	[SerializeField] private TutorialScript[] m_tutorialScripts;
 	[SerializeField] private Canvas m_tutorialCanvasPrefab;
 	[SerializeField] private Vector3 m_spwanPoint;
+	[SerializeField] private GameObject m_tutorialMenuPrefab;
+	[SerializeField] private GameObject m_menu;
 	private TutorialCanvas m_tutorialCanvas;
 	private int m_leftTutorialCount;
 
@@ -34,7 +36,17 @@ public class TutorialManager : MonoBehaviour
 	}
 	public void Update()
 	{
-		
+		if (Input.GetKeyDown(KeyCode.Escape)) 
+		{
+			TutorialExit();
+			return;
+			if (m_menu != null)
+			{
+				Destroy(m_menu);
+				return;
+			}
+			m_menu = Instantiate(m_tutorialMenuPrefab);
+		}
 	}
 	public void StartNextTutorial(Vector3 pSpwanPoint)
 	{
@@ -47,8 +59,7 @@ public class TutorialManager : MonoBehaviour
 		}
 		else
 		{
-			Time.timeScale = 1;
-			SceneController.Instance.LoadScene(SceneType.Titlemain);
+			TutorialExit();
 		}
 		print("Next Tutorial !!");
 		Debug.Log($"Tutorial Level : {PlayerPrefs.GetInt("TutorialLevel")} : {m_leftTutorialCount} {pSpwanPoint}");
@@ -59,5 +70,9 @@ public class TutorialManager : MonoBehaviour
 		Time.timeScale = 0;
 	}
 
-
+	private void TutorialExit()
+	{
+		Time.timeScale = 1;
+		SceneController.Instance.LoadScene(SceneType.Titlemain);
+	}
 }
