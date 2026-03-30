@@ -33,7 +33,6 @@ public partial class PlayerController
 		}
 		else if(Input.GetMouseButtonUp(1))
 		{
-			Cursor.lockState = CursorLockMode.None;
 			Cursor.visible = true;
 			m_isAiming = false;
 			DefaultCamera();

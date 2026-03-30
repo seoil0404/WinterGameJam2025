@@ -29,8 +29,8 @@ public class ChartManager : MonoBehaviour
             sb.AppendLine($"Rank {index + 1} : {scoreData[index]}");
         }
 
-        chartScrollController.MaxY = scoreData.Count * 75f;
-        scoreDataView.rectTransform.sizeDelta = new Vector2(scoreDataView.rectTransform.sizeDelta.x, scoreData.Count * 75f);
+        chartScrollController.MaxY = scoreData.Count * 80;
+        scoreDataView.rectTransform.sizeDelta = new Vector2(scoreDataView.rectTransform.sizeDelta.x, scoreData.Count * 80);
         scoreDataView.text = sb.ToString();
     }
 
