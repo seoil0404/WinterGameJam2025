@@ -24,7 +24,7 @@ public class TutorialCanvas : MonoBehaviour
 
 	public void NextPage()
 	{
-		Debug.Log($"{m_leftScriptCount} < {m_script.Scripts.Length}");
+		//Debug.Log($"{m_leftScriptCount} < {m_script.Scripts.Length}");
 		if (m_leftScriptCount < m_script.Scripts.Length)
 		{
 			m_scriptText.text = m_script.Scripts[m_leftScriptCount];

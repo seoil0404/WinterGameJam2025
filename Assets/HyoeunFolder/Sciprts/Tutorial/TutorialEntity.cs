@@ -11,7 +11,9 @@ public class TutorialEntity : Entity
 	private void OnTriggerEnter(Collider collision)
 	{
 		if (m_isTutorialPlaying) return;
-
-		if(collision.transform.CompareTag("Player"))TutorialManager.Instance.StartNextTutorial(this.transform.position);
+		PlayerPrefs.SetFloat("TutorialX", this.transform.position.x);
+		PlayerPrefs.SetFloat("TutorialY", this.transform.position.y);
+		PlayerPrefs.SetFloat("TutorialZ", this.transform.position.z);
+		if (collision.transform.CompareTag("Player"))TutorialManager.Instance.StartNextTutorial(this.transform.position);
 	}
 }
