@@ -564,6 +564,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 53ec401c2e832454a9ad7dd58ec2ee49, type: 2}
   m_tutorialCanvasPrefab: {fileID: 3672049059397412805, guid: 2f26d181eceae834998bf9dadb8a1742, type: 3}
   m_spwanPoint: {x: 0, y: 0, z: 0}
+  m_tutorialMenuPrefab: {fileID: 1404090770883945050, guid: 49b883e6dbd542e4a851beaa94ee1713, type: 3}
+  m_menu: {fileID: 0}
 --- !u!4 &386225490
 Transform:
   m_ObjectHideFlags: 0
