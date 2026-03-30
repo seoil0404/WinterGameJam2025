@@ -19,10 +19,12 @@ public class SettingUI : MonoBehaviour
     private void OnEnable()
     {
         Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     private void OnDisable()
     {
         Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

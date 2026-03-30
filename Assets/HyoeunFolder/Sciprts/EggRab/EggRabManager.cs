@@ -58,7 +58,6 @@ public class EggRabManager : MonoBehaviour
 
         if(m_leftPlayingTime > m_playingTime && !isEnd)
         {
-            Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             isEnd = true;
 
