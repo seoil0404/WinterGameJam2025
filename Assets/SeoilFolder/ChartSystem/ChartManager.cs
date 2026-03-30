@@ -11,6 +11,8 @@ public class ChartManager : MonoBehaviour
 
     private List<int> scoreData = new();
 
+    private bool isQuitted = false;
+
     private void Start()
     {
         var scoreDataString = ScoreManager.ScoreData;
@@ -36,9 +38,18 @@ public class ChartManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneController.Instance.LoadScene(SceneType.Titlemain);
+            Quit();
         }
+    }
+
+    public void Quit()
+    {
+        if (isQuitted)
+            return;
+
+        isQuitted = true;
+        SceneController.Instance.LoadScene(SceneType.Titlemain);
     }
 }
