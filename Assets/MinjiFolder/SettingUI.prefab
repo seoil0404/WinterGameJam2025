@@ -1296,7 +1296,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Exit
+  m_Text: Continue
 --- !u!1 &7064740992892613673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1684,9 +1684,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9045714584096247725}
-        m_TargetAssemblyTypeName: AudioSettingManager, Assembly-CSharp
-        m_MethodName: DisableThis
+      - m_Target: {fileID: 183995923997883284}
+        m_TargetAssemblyTypeName: SettingUI, Assembly-CSharp
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

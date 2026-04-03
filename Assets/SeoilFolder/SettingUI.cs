@@ -25,6 +25,13 @@ public class SettingUI : MonoBehaviour
     private void OnDisable()
     {
         Time.timeScale = 1f;
-        Cursor.lockState = CursorLockMode.Locked;
+        
+        if(FindAnyObjectByType<PlayerController>() != null)
+            Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void Quit()
+    {
+        gameObject.SetActive(false);
     }
 }
