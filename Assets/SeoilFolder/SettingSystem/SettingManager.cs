@@ -28,7 +28,7 @@ public class SettingManager : MonoBehaviour
     {
         if(FindAnyObjectByType<PlayerController>() != null && Input.GetKeyDown(KeyCode.Escape))
         {
-            SettingUI.Instance.gameObject.SetActive(!SettingUI.Instance.gameObject.activeSelf);
+            //SettingUI.Instance.gameObject.SetActive(!SettingUI.Instance.gameObject.activeSelf);
         }
             
     }
