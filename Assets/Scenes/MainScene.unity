@@ -2348,6 +2348,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54d004471a42a1848a94219d3808de5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DefaultObstacle
+--- !u!1 &1971502700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1971502702}
+  - component: {fileID: 1971502701}
+  m_Layer: 0
+  m_Name: PauseHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1971502701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971502700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 672571084fdadcc479661daebcab506f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseHandler
+  pauseUI: {fileID: 75377567}
+--- !u!4 &1971502702
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971502700}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 976, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2020079706 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1457144325913574196, guid: 8cd6eb6af2fdacf4ab764b2e17de0f7c, type: 3}
@@ -2624,3 +2669,4 @@ SceneRoots:
   - {fileID: 134939665}
   - {fileID: 1262082607}
   - {fileID: 1865516485}
+  - {fileID: 1971502702}
