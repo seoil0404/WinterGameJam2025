@@ -77,7 +77,6 @@ public partial class PlayerController
 		if (m_isAiming)
 		{
 			m_body.transform.rotation = Quaternion.Euler(new Vector3(0, Camera.main.transform.rotation.eulerAngles.y, 0));
-			Debug.Log(m_body.transform.rotation.eulerAngles);
 			return;
 		}
 

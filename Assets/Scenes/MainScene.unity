@@ -1637,7 +1637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472b53953eb1b7e43b14fe90568fe9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseManager
-  settingUI: {fileID: 1262082608}
+  settingUI: {fileID: 0}
 --- !u!1 &1168126861
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,11 +1857,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
---- !u!1 &1262082608 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2650090878468271462, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
-  m_PrefabInstance: {fileID: 1262082607}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1262082609 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3002178257268159042, guid: f70b3292cf96282449c4f2bed45ddf11, type: 3}
@@ -2522,12 +2517,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1404090770883945050, guid: 1973698971f219244a1b7b8fb8ff45e5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5198607592509103918, guid: 1973698971f219244a1b7b8fb8ff45e5, type: 3}
       propertyPath: SettingUI
       value: 
-      objectReference: {fileID: 1262082608}
+      objectReference: {fileID: 0}
     - target: {fileID: 7518047303435839323, guid: 1973698971f219244a1b7b8fb8ff45e5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

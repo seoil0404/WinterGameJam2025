@@ -40,9 +40,6 @@ public class TutorialCanvas : MonoBehaviour
 			else m_questImage.gameObject.SetActive(false);
 			m_scriptImage.gameObject.SetActive(false);
 
-			Cursor.lockState = CursorLockMode.Locked;
-			Cursor.visible = true;
-			Time.timeScale = 1;
 		}
 	}
 }

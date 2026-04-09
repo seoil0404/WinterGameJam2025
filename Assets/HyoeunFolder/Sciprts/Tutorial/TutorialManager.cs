@@ -64,10 +64,6 @@ public class TutorialManager : MonoBehaviour
 		print("Next Tutorial !!");
 		Debug.Log($"Tutorial Level : {PlayerPrefs.GetInt("TutorialLevel")} : {m_leftTutorialCount} {pSpwanPoint}");
 
-
-		Cursor.lockState = CursorLockMode.None;
-		Cursor.visible = true;
-		Time.timeScale = 0;
 	}
 
 	private void TutorialExit()
