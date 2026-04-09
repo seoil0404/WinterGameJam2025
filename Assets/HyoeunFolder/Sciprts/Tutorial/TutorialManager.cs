@@ -21,10 +21,13 @@ public class TutorialManager : MonoBehaviour
 		print($"Tutorial Reset SpawnPoint {m_spwanPoint}, {PlayerPrefs.GetFloat("TutorialX")},{PlayerPrefs.GetFloat("TutorialY")},{PlayerPrefs.GetFloat("TutorialZ")}");
 		SceneController.Instance.LoadSceneWithoutFade(SceneType.TutorialScene);
 		print("Reload Tutorial  !!");
+		
 
 	}
 	private void Awake()
 	{
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
 		m_leftTutorialCount = PlayerPrefs.GetInt("TutorialLevel");
 		Debug.Log($"Tutorial Level : {PlayerPrefs.GetInt("TutorialLevel")}");
 		Instance = this;
@@ -36,7 +39,7 @@ public class TutorialManager : MonoBehaviour
 	}
 	public void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Escape)) 
+		/*if (Input.GetKeyDown(KeyCode.Escape)) 
 		{
 			TutorialExit();
 			return;
@@ -46,7 +49,7 @@ public class TutorialManager : MonoBehaviour
 				return;
 			}
 			m_menu = Instantiate(m_tutorialMenuPrefab);
-		}
+		}*/
 	}
 	public void StartNextTutorial(Vector3 pSpwanPoint)
 	{

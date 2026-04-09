@@ -20,10 +20,19 @@ public class TutorialCanvas : MonoBehaviour
 		m_scriptText = m_scriptImage.GetComponentInChildren<Text>();
 		m_questText = m_questImage.GetComponentInChildren<Text>();
 		NextPage();
-    }
 
+		Time.timeScale = 0f;
+    }
+	private void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Mouse0))
+		{
+			NextPage();
+		}
+	}
 	public void NextPage()
 	{
+		
 		//Debug.Log($"{m_leftScriptCount} < {m_script.Scripts.Length}");
 		if (m_leftScriptCount < m_script.Scripts.Length)
 		{
@@ -32,8 +41,10 @@ public class TutorialCanvas : MonoBehaviour
 		}
 		else
 		{
+			
 			if (m_script.Quest != "")
 			{
+				Time.timeScale = 1;
 				m_questText.text = m_script.Quest;
 				m_questImage.gameObject.SetActive(true);
 			}
